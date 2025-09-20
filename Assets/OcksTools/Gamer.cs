@@ -109,6 +109,8 @@ public class Gamer : MonoBehaviour
     {
         var mm = Tags.refs["MainMenu2"].GetComponent<MainMenu>();
 
+        Tags.refs["FartShow"].SetActive(false);
+
         var a = mm.References[0].transform.position;
         var b = mm.References[1].transform.position;
         var c = mm.References[2].transform.position;
@@ -128,27 +130,39 @@ public class Gamer : MonoBehaviour
             d.color = e;
         }
         ));
-
-        SoundSystem.Instance.PlaySound(new OXSound("Wheel", 0.5f));
+        yield return new WaitForSeconds(0.5f);
+        SoundSystem.Instance.PlaySound(new OXSound("Wheel", 1f));
         yield return StartCoroutine(OXLerp.Linear((x) =>
         {
             var a1 = Vector3.Lerp(new Vector3(a.x, y1, a.z), new Vector3(a.x, y2, a.z), RandomFunctions.EaseBounce(x));
             mm.References[0].transform.position = a1;
         }
         ));
-        SoundSystem.Instance.PlaySound(new OXSound("Game", 0.5f));
+        SoundSystem.Instance.PlaySound(new OXSound("Game", 1f));
         yield return StartCoroutine(OXLerp.Linear((x) =>
         {
             var a1 = Vector3.Lerp(new Vector3(b.x, y1, b.z), new Vector3(b.x, y2, b.z), RandomFunctions.EaseBounce(x));
             mm.References[1].transform.position = a1;
         }
         ));
-        SoundSystem.Instance.PlaySound(new OXSound("Deluxe", 0.5f).Pitch(0.9f));
+        SoundSystem.Instance.PlaySound(new OXSound("Deluxe", 1f).Pitch(0.9f));
         yield return StartCoroutine(OXLerp.Linear((x) =>
         {
             var a1 = Vector3.Lerp(new Vector3(c.x, y1, c.z), new Vector3(c.x, y2, c.z), RandomFunctions.EaseBounce(x));
             mm.References[2].transform.position = a1;
         }
+        ));
+        SoundSystem.Instance.PlaySound(new OXSound("fart", 0.8f));
+        Tags.refs["FartShow"].SetActive(true);
+
+        a = mm.References[5].transform.position;
+        b = mm.References[6].transform.position;
+
+        StartCoroutine(OXLerp.Linear((x) =>
+        {
+            var a1 = Vector3.LerpUnclamped(b, a, RandomFunctions.EaseOvershoot(x, 3, 3f));
+            mm.References[7].transform.position = a1;
+        }, 0.7f
         ));
     }
 
