@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 177fc1fdb0d1d5b40b4c27376c6aea8c
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Milker
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: bebd55c55f9d3484cb89ef9fb948d484, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
