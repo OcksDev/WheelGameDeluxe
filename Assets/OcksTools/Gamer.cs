@@ -130,19 +130,20 @@ public class Gamer : MonoBehaviour
         ));
 
         SoundSystem.Instance.PlaySound(new OXSound("Wheel", 0.5f));
-
         yield return StartCoroutine(OXLerp.Linear((x) =>
         {
             var a1 = Vector3.Lerp(new Vector3(a.x, y1, a.z), new Vector3(a.x, y2, a.z), RandomFunctions.EaseBounce(x));
             mm.References[0].transform.position = a1;
         }
         ));
+        SoundSystem.Instance.PlaySound(new OXSound("Game", 0.5f));
         yield return StartCoroutine(OXLerp.Linear((x) =>
         {
             var a1 = Vector3.Lerp(new Vector3(b.x, y1, b.z), new Vector3(b.x, y2, b.z), RandomFunctions.EaseBounce(x));
             mm.References[1].transform.position = a1;
         }
         ));
+        SoundSystem.Instance.PlaySound(new OXSound("Deluxe", 0.5f).Pitch(0.9f));
         yield return StartCoroutine(OXLerp.Linear((x) =>
         {
             var a1 = Vector3.Lerp(new Vector3(c.x, y1, c.z), new Vector3(c.x, y2, c.z), RandomFunctions.EaseBounce(x));
