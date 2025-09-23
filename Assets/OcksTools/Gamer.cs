@@ -39,7 +39,6 @@ public class Gamer : MonoBehaviour
             a.CompileThings();
         }
         CloseAllMenus();
-        UpdateMenus();
     }
     private void Start()
     {
@@ -72,6 +71,44 @@ public class Gamer : MonoBehaviour
     {
         CanonEvents.Add(a.Name, a);
     }
+    public void StartGameClick()
+    {
+        if (HasEvented("RealStarted")) return;
+        AddEvented(new NonCanonEvent("RealStarted"));
+        StartCoroutine(LoadIntoGame());
+    }
+
+    public IEnumerator LoadIntoGame()
+    {
+        var d = Tags.refs["Fader"].GetComponent<Image>();
+        var dd = Color.black;
+        dd.a = 0;
+        d.color = dd;
+        yield return StartCoroutine(OXLerp.Linear((x) =>
+        {
+            var e = Color.black;
+            e.a = x;
+            d.color = e;
+        }
+        ));
+        CloseAllMenus();
+
+        SpawnSystem.Spawn(new SpawnData("Player")
+            .Position(Vector3.zero)
+            .ParentFromRef("ObjectHolder")
+            );
+
+        yield return StartCoroutine(OXLerp.Linear((x) =>
+        {
+            var e = Color.black;
+            e.a = 1-x;
+            d.color = e;
+        }
+        ));
+    }
+
+
+
     public bool[] checks = new bool[20];
     public void SetMainMenu(bool a)
     {
@@ -89,12 +126,14 @@ public class Gamer : MonoBehaviour
         {
             checks[i] = false;
         }
+        UpdateMenus();
     }
 
     public void UpdateMenus()
     {
         Tags.refs["MainMenu"].SetActive(checks[0]);
         Tags.refs["MainMenu2"].SetActive(checks[0]);
+        Tags.refs["SexMac"].SetActive(HasEvented("RealStarted"));
     }
 
     public void StartGameLol()
