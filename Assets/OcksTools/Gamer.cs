@@ -133,7 +133,7 @@ public class Gamer : MonoBehaviour
     {
         Tags.refs["MainMenu"].SetActive(checks[0]);
         Tags.refs["MainMenu2"].SetActive(checks[0]);
-        Tags.refs["SexMac"].SetActive(HasEvented("RealStarted"));
+        Tags.refs["SexMac"].SetActive(!HasEvented("RealStarted"));
     }
 
     public void StartGameLol()
