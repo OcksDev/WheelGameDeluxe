@@ -96,12 +96,7 @@ public class Gamer : MonoBehaviour
             d.color = e;
         }
         ));
-        CloseAllMenus();
-
-        SpawnSystem.Spawn(new SpawnData("Player")
-            .Position(Vector3.zero)
-            .ParentFromRef("ObjectHolder")
-            );
+        StartNewGame();
 
         yield return StartCoroutine(OXLerp.Linear((x) =>
         {
@@ -110,8 +105,19 @@ public class Gamer : MonoBehaviour
             d.color = e;
         }
         ));
+
+        DialogLol.Instance.StartDialog("Start");
     }
 
+    public void StartNewGame()
+    {
+        CloseAllMenus();
+
+        SpawnSystem.Spawn(new SpawnData("Player")
+            .Position(Vector3.zero)
+            .ParentFromRef("ObjectHolder")
+            );
+    }
 
 
     public bool[] checks = new bool[20];

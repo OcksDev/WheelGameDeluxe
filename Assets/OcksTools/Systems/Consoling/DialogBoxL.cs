@@ -11,6 +11,8 @@ public class DialogBoxL : MonoBehaviour
     private Image img;
     public Image imgl;
     public Image imgr;
+    public Image imgl2;
+    public Image imgr2;
     public TextMeshProUGUI clikctoskpo;
     public List<GameObject> q_gameobjects = new List<GameObject>();
     private TextMeshProUGUI b1;
@@ -68,23 +70,25 @@ public class DialogBoxL : MonoBehaviour
         b2.text = title;
         b2.color = ti_co;
         img.color = bg_co;
+        imgl2.color = bg_co;
+        imgr2.color = bg_co;
         if(sprl != null)
         {
-            imgl.gameObject.SetActive(true);
+            imgl2.gameObject.SetActive(true);
             imgl.sprite = sprl;
         }
         else
         {
-            imgl.gameObject.SetActive(false);
+            imgl2.gameObject.SetActive(false);
         }
         if(sprr != null)
         {
-            imgr.gameObject.SetActive(true);
+            imgr2.gameObject.SetActive(true);
             imgr.sprite = sprr;
         }
         else
         {
-            imgr.gameObject.SetActive(false);
+            imgr2.gameObject.SetActive(false);
         }
         int i = 0;
         foreach (var f in q_tmps)

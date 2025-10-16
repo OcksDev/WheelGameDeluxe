@@ -592,7 +592,7 @@ public class DialogLol : MonoBehaviour
 
     public void SetDefaultParams()
     {
-        cps = 20;
+        cps = 24;
         cps2 = 0;
         cps3 = 0;
         pps = 0.4f;
@@ -600,7 +600,7 @@ public class DialogLol : MonoBehaviour
         speaker = "?";
         color = "255|255|255|255";
         tit_color = "255|255|255|255";
-        bg_color = "84|144|84|255";
+        bg_color = "140|140|140|255";
         RichTextEnabled = true;
         CanSkip = Gamer.Instance.DeveloperFlags.HasFlag(Gamer.DevFlags.DialogSkipAllowed);
         sprl = null;
