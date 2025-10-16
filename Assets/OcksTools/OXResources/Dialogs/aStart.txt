@@ -1,0 +1,164 @@
+-Test Dialog-
+</> <Name=MC>
+</> ... What's going on? Where am I?
+</> 
+</> <Name=MC>
+</> My head, it feels funny.
+</> 
+</> <Name=MC>
+</> It's like, like, I'm not a door anymore...<br>Wait a minute-
+</> 
+</> <Name=Unkown>
+</> Hey look, a new arrival! Sweet!
+</> 
+</> <Name=MC>
+</> I feel.. round.<br>Does that even make sense?
+</> 
+</> <Name=Unkown>
+</> Uhhh?
+</> 
+</> <Name=MC>
+</> First, I am just living my life, then I become a door of all things, and now, a wheel? What has my life become?
+</> 
+</> <Name=Unkown>
+</> Hello? Can you even hear me?
+</> 
+</> <Name=MC>
+</> Alright, well, this is a lot to take in right now, but I guess let's tackle things one at a time. Who is talking to me right now?
+</> 
+</> <Name=Unkown>
+</> Umm? <Event=UWheelReveal>I am?
+</> 
+</> <Name=MC>
+</> Sorry, I meant, what is your name?
+</> 
+</> <Name=Unkown>
+</> Oh, well, I guess that would make sense. My name is <Name=Unicycle Wheel>Unicycle Wheel. What's yours?
+</> 
+</> <Name=MC>
+</> My name is Steering Wheel.<Wait=0.4> Wait, what? I didn't say that. I said Steering Wheel. Steering Wheel. Steering Wheel. STEERING WHEEL!
+</> 
+</> <Name=Unicycle Wheel>
+</> I should probably explain that. Here in Wheel Civilization, any names that you had outside no longer apply. Whenever you try to say an outside name, it gets replaced by your wheel name.
+</> 
+</> <Name=MC>
+</> What?
+</> 
+</> <Name=Unicycle Wheel>
+</> It's pretty straight forward. Whenever you try to say the wrong name, you just, don't.
+</> 
+</> <Name=MC>
+</> Steering Wheel.
+</> 
+</> <Name=Unicycle Wheel>
+</> It gets some getting used to.
+</> 
+</> <Name=MC>
+</> No shot.<br>Oh no, there's a swear filter too?
+</> 
+</> <Name=Unicycle Wheel>
+</> Here in Wheel Civilization, swearing is not allowed and is considered against the rules.
+</> 
+</> <Name=MC>
+</> Rules of where? Where even are we?
+</> 
+</> <Name=Unicycle Wheel>
+</> I guess I'm going to be the one showing you around then? That's my luck for being the only one here when a newbie showed up.
+</> 
+</> <Name=MC>
+</> Unicycle Wheel?
+</> 
+</> <Name=Unicycle Wheel>
+</> Yes, we are in a place called Wheel Civilization. Here in Wheel Civilization, we are trapped within a school building. We can not leave, nor can we even view the outside.
+</> 
+</> <Name=MC>
+</> Why do you keep explaining things like that?
+</> 
+</> <Name=Unicycle Wheel>
+</> The "Here in Wheel Civilization" part?
+</>
+</> <Name=MC>
+</> Yeah.
+</> 
+</> <Name=Unicycle Wheel>
+</> Here in Wheel Civilization, there are quite a few rules restricting how we can talk, and this is one of them.
+</>
+</> <Name=MC>
+</> This place makes no sense.
+</> 
+</> <Name=Unicycle Wheel>
+</> Tell me about it, I've almost been around the longest out of anyone here, and I can't comprehend even half of the stuff that goes on. 
+</>
+</> <Name=MC>
+</> "Around the longest", wait, you said we can't leave the school? Are we actualy trapped here?
+</> 
+</> <Name=Unicycle Wheel>
+</> So far as anyone has been able to figure out, yes.
+</>
+</> <Name=MC>
+</> What about food? If we can't leave the building, how are we going to eat?
+</> 
+</> <Name=Unicycle Wheel>
+</> What is "food"?
+</>
+</> <Name=MC>
+</> Food? Are you alright? Stuff that we eat every day to keep ourselves living? Otherwise we die?
+</> 
+</> <Name=Unicycle Wheel>
+</> We're wheels, we don't do anything to keep ourselves living. We just continue existing in perpetuity. I don't know what backwards universe you came from where you needed to consume things daily in order to stay alive, but we are not like that here.
+</>
+</> <Name=MC>
+</> That... this is a lot to take in. What about water? Or the bathroom?
+</> 
+</> <Name=Unicycle Wheel>
+</> Are these other things from your universe that you had to consume to stay alive?
+</>
+</> <Name=MC>
+</> Uhhh, close enough, I think I see where this is going.
+</> 
+</> <Name=Unicycle Wheel>
+</> Here in Wheel Civilzation, we don't have those.
+</>
+</> <Name=MC>
+</> Of course, well, I am kind of having a forking hard time understanding all of this.
+</> 
+</> <Name=Unicycle Wheel>
+</> Care to swap stories? I find that it helps when you're trying to adjust.
+</>
+</> <Name=MC>
+</> I was just a person, you know, out living my life. I had just graduted college, I had a sick job already lined up for me, everything was great.
+</> 
+</> <Name=Unicycle Wheel>
+</> And then?
+</>
+</> <Name=MC>
+</> And then Truck-kun showed up and isekai'd my grass into becoming a living door. 
+</> 
+</> <Name=Unicycle Wheel>
+</> Wait, you were reincarnated before becoming a wheel?
+</>
+</> <Name=MC>
+</> Yeah, I was on some stange island in the middle of an ocean. I remember seeing a really long bridge and a house in the distance, but right as I was about to make my way over, a missile flew in out of nowhere and killed me again, which brings me to now. 
+</> 
+</> <Name=Unicycle Wheel>
+</> That, certainly is a strange story. The first I am aware of infact, double reincarnating...
+</>
+</> <Name=MC>
+</> Is.. reincarnating once normal?
+</> 
+</> <Name=Unicycle Wheel>
+</> Yeah, all of us were, that's how we got here.
+</>
+</> <Name=MC>
+</> So what's your story?
+</> 
+</> <Name=Unicycle Wheel>
+</> I was a necklace, living a beutiful life, but one day, out of the blue, I got dropped. Me, being a priceless necklace, I was so fragile that I shattered and died. That's when I woke up here, alive again, and a wheel.
+</>
+</> <Name=MC>
+</> Was.. everyone here like that?
+</> 
+</> <Name=Unicycle Wheel>
+</> Yeah, you're the only one who had some kind of intermediary life between your past and present. Interesting... Very interesting...
+</> 
+

@@ -5018,7 +5018,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -5000
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -14916,7 +14916,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2508634535104828721, guid: f6c91053f4d25dd4eac36815a56e81cb, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4700751391501385358, guid: f6c91053f4d25dd4eac36815a56e81cb, type: 3}
       propertyPath: m_Pivot.x
@@ -15001,6 +15001,14 @@ PrefabInstance:
     - target: {fileID: 4700751391501385358, guid: f6c91053f4d25dd4eac36815a56e81cb, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5139887024265451775, guid: f6c91053f4d25dd4eac36815a56e81cb, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 109.46083
+      objectReference: {fileID: 0}
+    - target: {fileID: 5247014332848176202, guid: f6c91053f4d25dd4eac36815a56e81cb, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 109.46083
       objectReference: {fileID: 0}
     - target: {fileID: 6949521860457052900, guid: f6c91053f4d25dd4eac36815a56e81cb, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -15199,6 +15207,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 54727e649cec8a540bd733925e3db080, type: 3}
   - {fileID: 21300000, guid: b41b893f1956b63418cfd787e90b7cc6, type: 3}
   - {fileID: 21300000, guid: 787b4819111c6374aaf01ce6e5bf2b29, type: 3}
+  - {fileID: -4242673910277742228, guid: da7f3d37055cdef4f8b4100bb6a90065, type: 3}
   characters: []
   checks: 0000000000000000000000000000000000000000
 --- !u!4 &402148272
@@ -55197,6 +55206,18 @@ PrefabInstance:
       propertyPath: DialogBoxObject
       value: 
       objectReference: {fileID: 2050469049}
+    - target: {fileID: 6167858925768747828, guid: e098ef03bdfcc114c935df61ce01347f, type: 3}
+      propertyPath: DialogFiles.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6167858925768747828, guid: e098ef03bdfcc114c935df61ce01347f, type: 3}
+      propertyPath: DialogFiles.Array.data[0].File
+      value: 
+      objectReference: {fileID: 4900000, guid: 17bb4bf512535b3448caab3a25b2ee5c, type: 3}
+    - target: {fileID: 6167858925768747828, guid: e098ef03bdfcc114c935df61ce01347f, type: 3}
+      propertyPath: DialogFiles.Array.data[0].Name
+      value: Start
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

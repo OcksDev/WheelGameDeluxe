@@ -9,6 +9,8 @@ public class DialogBoxL : MonoBehaviour
     public GameObject TextObject;
     public GameObject TitleObject;
     private Image img;
+    public Image imgl;
+    public Image imgr;
     public TextMeshProUGUI clikctoskpo;
     public List<GameObject> q_gameobjects = new List<GameObject>();
     private TextMeshProUGUI b1;
@@ -19,6 +21,8 @@ public class DialogBoxL : MonoBehaviour
     public string color = "";
     public string tit_color = "";
     public string bg_color = "";
+    public Sprite sprl;
+    public Sprite sprr;
     public List<string> qs = new List<string>();
     private Color32 co;
     private Color32 ti_co;
@@ -64,6 +68,24 @@ public class DialogBoxL : MonoBehaviour
         b2.text = title;
         b2.color = ti_co;
         img.color = bg_co;
+        if(sprl != null)
+        {
+            imgl.gameObject.SetActive(true);
+            imgl.sprite = sprl;
+        }
+        else
+        {
+            imgl.gameObject.SetActive(false);
+        }
+        if(sprr != null)
+        {
+            imgr.gameObject.SetActive(true);
+            imgr.sprite = sprr;
+        }
+        else
+        {
+            imgr.gameObject.SetActive(false);
+        }
         int i = 0;
         foreach (var f in q_tmps)
         {

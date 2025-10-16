@@ -12,6 +12,7 @@ public class Gamer : MonoBehaviour
     public DevFlags DeveloperFlags = DevFlags.None;
     public List<Sprite> sprites = new List<Sprite>();
     public List<Character> characters = new List<Character>();
+    public Dictionary<string,Character> characterdict = new Dictionary<string, Character>();
     public static Gamer Instance;
     private void Awake()
     {
@@ -39,6 +40,10 @@ public class Gamer : MonoBehaviour
             a.CompileThings();
         }
         CloseAllMenus();
+        foreach (var a in characters)
+        {
+            characterdict.Add(a.Name, a);
+        }
     }
     private void Start()
     {
@@ -210,7 +215,7 @@ public class Gamer : MonoBehaviour
     {
         None = 0,
         NoIntro = 1 << 1,
-        Test1 = 1 << 2,
+        DialogSkipAllowed = 1 << 2,
     }
 
 }

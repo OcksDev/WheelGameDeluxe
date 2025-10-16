@@ -34,6 +34,8 @@ public class DialogLol : MonoBehaviour
     public string fulltext = "";
     public string color = "";
     public string bg_color = "";
+    public Sprite sprl = null;
+    public Sprite sprr = null;
     public string tit_color = "";
     public string datatype = "Dialog";
     public bool RichTextEnabled = true;
@@ -322,6 +324,24 @@ public class DialogLol : MonoBehaviour
             case "Name":
                 // Changes the title of the dialog window
                 speaker = data;
+                sprl = null;
+                sprr = null;
+                if (Gamer.Instance.characterdict.ContainsKey(speaker))
+                {
+                    if(speaker == "MC")
+                    {
+                        sprl = Gamer.Instance.characterdict[speaker].WheelImage;
+                        speaker = "Steering Wheel";
+                    }
+                    else
+                    {
+                        sprr = Gamer.Instance.characterdict[speaker].WheelImage;
+                    }
+                }
+                else
+                {
+                    sprr = Gamer.Instance.sprites[13];
+                }
                 succeeded = true;
                 break;
             case "RichText":
@@ -575,14 +595,16 @@ public class DialogLol : MonoBehaviour
         cps = 20;
         cps2 = 0;
         cps3 = 0;
-        pps = 0.2f;
+        pps = 0.4f;
         pps2 = 0.8f;
         speaker = "?";
         color = "255|255|255|255";
         tit_color = "255|255|255|255";
         bg_color = "84|144|84|255";
         RichTextEnabled = true;
-        CanSkip = true;
+        CanSkip = Gamer.Instance.DeveloperFlags.HasFlag(Gamer.DevFlags.DialogSkipAllowed);
+        sprl = null;
+        sprr = null;
         CanEscape = false;
         AutoSkip = -1;
         EndBanna();
@@ -710,6 +732,8 @@ public class DialogLol : MonoBehaviour
         pp.title = speaker;
         pp.color = color;
         pp.tit_color = tit_color;
+        pp.sprl = sprl;
+        pp.sprr = sprr;
         pp.UpdateColor();
         pp.UpdateText();
     }
@@ -878,6 +902,8 @@ public class DialogLol : MonoBehaviour
                             pp.color = color;
                             pp.tit_color = tit_color;
                             pp.bg_color = bg_color;
+                            pp.sprr = sprr;
+                            pp.sprl = sprl;
                             pp.UpdateColor();
                         }
                     }
