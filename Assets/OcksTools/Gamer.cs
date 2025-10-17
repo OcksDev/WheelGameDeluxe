@@ -14,8 +14,11 @@ public class Gamer : MonoBehaviour
     public List<Character> characters = new List<Character>();
     public Dictionary<string,Character> characterdict = new Dictionary<string, Character>();
     public static Gamer Instance;
+    public long GameTime = 0;
+    public List<TimedObject> Nerds = new List<TimedObject>();
     private void Awake()
     {
+        ConsoleLol.ConsoleCommandHook.Append(CreateWheelCommands);
         Instance = this;
         characters.Clear();
         characters.Add(new MainCharacter());
@@ -54,6 +57,15 @@ public class Gamer : MonoBehaviour
         else
         {
             StartCoroutine(WaitForVideo());
+        }
+    }
+
+    public void SetGameTime(long a)
+    {
+        GameTime = a;
+        foreach(var b in Nerds)
+        {
+            b.UpdateByActions(this);
         }
     }
 
@@ -117,6 +129,8 @@ public class Gamer : MonoBehaviour
             .Position(Vector3.zero)
             .ParentFromRef("ObjectHolder")
             );
+
+        SetGameTime(0);
     }
 
 
@@ -222,6 +236,18 @@ public class Gamer : MonoBehaviour
         None = 0,
         NoIntro = 1 << 1,
         DialogSkipAllowed = 1 << 2,
+    }
+
+    public void CreateWheelCommands()
+    {
+        ConsoleLol.Instance.Add(new OXCommand("time").Action(
+            (x) =>
+            {
+                SetGameTime(long.Parse(x.com[1]));
+            }
+
+
+            ));
     }
 
 }
