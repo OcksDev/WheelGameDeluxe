@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class InputManager : MonoBehaviour
 {
+    public List<string> d_locklevel;
     public static List<string> locklevel = new List<string>();
     public static Dictionary<KeyCode, string> keynames = new Dictionary<KeyCode, string>();
     public static Dictionary<string, KeyCode> namekeys = new Dictionary<string, KeyCode>();
@@ -18,7 +19,10 @@ public class InputManager : MonoBehaviour
         AssembleTheCodes();
         ResetLockLevel();
     }
-
+    private void FixedUpdate()
+    {
+        d_locklevel = locklevel;
+    }
     public static void AssembleTheCodes()
     {
         namekeys.Clear();

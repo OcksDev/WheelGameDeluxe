@@ -47,6 +47,8 @@ public class Gamer : MonoBehaviour
         {
             characterdict.Add(a.Name, a);
         }
+
+        //GlobalEvent.Append("UWheelReveal", UWheelReveal);
     }
     private void Start()
     {
@@ -63,7 +65,12 @@ public class Gamer : MonoBehaviour
     public void SetGameTime(long a)
     {
         GameTime = a;
-        foreach(var b in Nerds)
+        UpdateAllNerds();
+    }
+
+    public void UpdateAllNerds()
+    {
+        foreach (var b in Nerds)
         {
             b.UpdateByActions(this);
         }
@@ -87,6 +94,7 @@ public class Gamer : MonoBehaviour
     public void AddEvented(CanonEvent a)
     {
         CanonEvents.Add(a.Name, a);
+        UpdateAllNerds();
     }
     public void StartGameClick()
     {
@@ -117,10 +125,18 @@ public class Gamer : MonoBehaviour
             d.color = e;
         }
         ));
-
+        yield return new WaitForSeconds(0.5f);
+        yield return OXLerp.Linear((x) =>
+        {
+            var dd = RandomFunctions.EaseInAndOut(x);
+            CameraLol.Instance.transform.position = Vector3.Lerp(new Vector3(0, 0, -10), new Vector3(0, -0.6f, -10), dd);
+        },2);
+        yield return new WaitForSeconds(0.5f);
         DialogLol.Instance.StartDialog("Start");
     }
 
+
+    public static bool DisablePlayerCamera = false;
     public void StartNewGame()
     {
         CloseAllMenus();
@@ -130,7 +146,12 @@ public class Gamer : MonoBehaviour
             .ParentFromRef("ObjectHolder")
             );
 
+        InputManager.AddLockLevel("Dialog");
         SetGameTime(0);
+        DisablePlayerCamera = true;
+        CameraLol.DisableCamera = true;
+        Camera.main.orthographicSize = 2;
+
     }
 
 
@@ -248,6 +269,22 @@ public class Gamer : MonoBehaviour
 
 
             ));
+    }
+
+    [AddToEvent("UWheelReveal")]
+    public void UWheelReveal()
+    {
+        Gamer.Instance.StartCoroutine(UWheelReveal2());
+    }
+
+    public IEnumerator UWheelReveal2()
+    {
+        yield return OXLerp.Linear((x) =>
+        {
+            var dd = RandomFunctions.EaseInAndOut(x);
+            CameraLol.Instance.transform.position = Vector3.Lerp(new Vector3(0, -0.6f, -10), new Vector3(2.8f, -1.2f, -10), dd);
+            Camera.main.orthographicSize = Mathf.Lerp(2, 4, dd);
+        }, 1.2f);
     }
 
 }

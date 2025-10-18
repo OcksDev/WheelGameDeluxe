@@ -4,10 +4,18 @@ using UnityEngine;
 
 public class TimedObject : MonoBehaviour
 {
+    public string Character = "";
+    [HideInInspector]
+    public Character CharacterLink;    
     public TimedActionBased DefaultState;
     public List<TimedAction> bb = new List<TimedAction>();
+    public string CurrentDesiredDialog = "";
     private void Start()
     {
+        if(Character != "")
+        {
+            CharacterLink = Gamer.Instance.characterdict[Character];
+        }
         if(DefaultState.Position == default)
         {
             DefaultState.Position = transform.position;
@@ -45,13 +53,23 @@ public class TimedObject : MonoBehaviour
                 case TimedAction.Times.AfterEvent:
                     if (g.HasEvented(a.TargetEvent)) DoAction(a);
                     break;
+                case TimedAction.Times.BeforeCharacterEvent:
+                    if (!CharacterLink.HasEvented(a.TargetEvent)) DoAction(a);
+                    break;
+                case TimedAction.Times.AfterCharacterEvent:
+                    if (CharacterLink.HasEvented(a.TargetEvent)) DoAction(a);
+                    break;
             }
         }
     }
     public void DoAction(TimedActionBased a)
     {
-        if(a.Position!=default) transform.position = a.Position;
-        gameObject.SetActive(a.Enabled);
+        if (!a.IgnoreAction)
+        {
+            if (a.Position != default) transform.position = a.Position;
+            gameObject.SetActive(a.Enabled);
+        }
+        CurrentDesiredDialog = a.Dialog;
     }
 
 }
@@ -69,11 +87,15 @@ public class TimedAction : TimedActionBased
         AtAndAfter,
         BeforeEvent,
         AfterEvent,
+        BeforeCharacterEvent,
+        AfterCharacterEvent,
     }
 }
 [Serializable]
 public class TimedActionBased
 {
+    public bool IgnoreAction = false;
     public Vector3 Position = default;
     public bool Enabled = true;
+    public string Dialog = "";
 }

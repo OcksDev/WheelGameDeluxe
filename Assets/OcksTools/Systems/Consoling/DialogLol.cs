@@ -802,16 +802,16 @@ public class DialogLol : MonoBehaviour
                     }
                     
                 }
-                catch
+                catch (Exception aa)
                 {
                     try
                     {
                         var sh = e.Substring(oldcharl + 1, ii - 1);
-                        Debug.LogWarning($"Something went fucked trying to parse \"{sh}\"");
+                        Debug.LogWarning($"Something went fucked trying to parse \"{sh}\".\n"+aa);
                     }
                     catch
                     {
-                        Debug.LogWarning("Something went fucked trying to parse a dialog attribute");
+                        Debug.LogWarning("Something went fucked trying to parse a dialog attribute.\n"+e);
                     }
                 }
                 if(emu != "Wait")

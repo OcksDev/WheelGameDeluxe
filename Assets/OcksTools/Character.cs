@@ -17,7 +17,16 @@ public class Character
     {
         Name = "Unknown";
     }
+    public bool HasEvented(string a)
+    {
+        return Events.ContainsKey(a);
+    }
 
+    public void AddEvented(CanonEvent a)
+    {
+        Events.Add(a.Name, a);
+        Gamer.Instance.UpdateAllNerds();
+    }
 
     public void CompileThings()
     {

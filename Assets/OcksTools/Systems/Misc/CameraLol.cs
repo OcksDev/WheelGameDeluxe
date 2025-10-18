@@ -18,6 +18,7 @@ public class CameraLol : MonoBehaviour
     {
         get { return instance; }
     }
+    public static bool DisableCamera=false;
 
     private void Awake()
     {
@@ -25,6 +26,7 @@ public class CameraLol : MonoBehaviour
     }
     private void FixedUpdate()
     {
+        if (DisableCamera) return;
         int i = -1;
         foreach(var shake in shakeo)
         {
@@ -44,6 +46,7 @@ public class CameraLol : MonoBehaviour
 
     private void LateUpdate()
     {
+        if (DisableCamera) return;
         /* some an example for what hurting a player could be like
         if (Input.GetKeyDown(KeyCode.N))
         {
