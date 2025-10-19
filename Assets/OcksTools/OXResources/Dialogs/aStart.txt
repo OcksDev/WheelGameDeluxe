@@ -210,7 +210,7 @@
 </> But we're talking about a person here, not an object. Pizza Wheel is their name.
 </> 
 </> <Name=MC>
-</> But-<Wait=1>Wha-<Wait=1>No, wait, hold on, I just realized something else, how do you know what a pizza is, but not what food is?
+</> But- <Wait=1>Wha- <Wait=1>No, wait, hold on, I just realized something else, how do you know what a pizza is, but not what food is?
 </> 
 </> <Name=Unicycle Wheel>
 </> A pizza is a pizza.
