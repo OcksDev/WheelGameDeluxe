@@ -39,24 +39,6 @@ public class ConversionAgrigator : MonoBehaviour
                 }
             }
 
-            methods = ass
-                .GetTypes()
-                .SelectMany(x => x.GetMethods())
-                .Where(y => y.GetCustomAttributes().OfType<AddToEvent>().Any())
-                .ToDictionary(z => z.ReflectedType.Name);
-            if (methods.Count > 0)
-            {
-                Console.Log(methods.ABDictionaryToStringDictionary().DictionaryToRead());
-                foreach (var a in methods)
-                {
-                    var dd = Activator.CreateInstance(a.Value.ReflectedType);
-                    var dsx = a.Value.GetCustomAttribute<AddToEvent>();
-                    GlobalEvent.Append(dsx.Event, Tags.GenerateID(), () =>
-                    {
-                        a.Value.Invoke(dd, new object[0]);
-                    });
-                }
-            }
         }
         
 

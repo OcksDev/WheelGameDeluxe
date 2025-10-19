@@ -10,7 +10,7 @@ public class CameraLol : MonoBehaviour
     public float MouseFollowStrength = 1;
     public static CameraLol instance;
     public Vector3 targetpos = new Vector3(0, 0, 0);
-    private Vector3 ppos = new Vector3(0, 0, 0);
+    public Vector3 ppos = new Vector3(0, 0, 0);
     private List<List<float>> shakeo = new List<List<float>>();
     private List<Vector4> shoveo = new List<Vector4>();
     // Start is called before the first frame update

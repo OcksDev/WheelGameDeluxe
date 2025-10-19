@@ -54,7 +54,7 @@
 </> It gets some getting used to.
 </> 
 </> <Name=MC>
-</> No shot.<br>Oh no, there's a swear filter too?
+</> No shot.<br>Oh fork, there's a swear filter too?
 </> 
 </> <Name=Unicycle Wheel>
 </> Here in Wheel Civilization, swearing is not allowed and is considered against the rules.
@@ -63,13 +63,13 @@
 </> Rules of where? Where even are we?
 </> 
 </> <Name=Unicycle Wheel>
-</> I guess I'm going to be the one showing you around then? That's my luck for being the only one here when a newbie showed up.
+</> Wheel Civilization.
 </> 
 </> <Name=MC>
-</> Unicycle Wheel?
+</> Wheel Civilization?
 </> 
 </> <Name=Unicycle Wheel>
-</> Yes, we are in a place called Wheel Civilization. Here in Wheel Civilization, we are trapped within a school building. We can not leave, nor can we even view the outside.
+</> Yes. Here in Wheel Civilization, we are trapped within a nonsensical school building. We can not leave, nor can we even view the outside.
 </> 
 </> <Name=MC>
 </> Why do you keep explaining things like that?
@@ -87,7 +87,7 @@
 </> This place makes no sense.
 </> 
 </> <Name=Unicycle Wheel>
-</> Tell me about it, I've almost been around the longest out of anyone here, and I can't comprehend even half of the stuff that goes on. 
+</> Tell me about it, I've been around almost the longest out of anyone here, and I can't even comprehend half of the stuff that goes on. 
 </>
 </> <Name=MC>
 </> "Around the longest", wait, you said we can't leave the school? Are we actualy trapped here?
@@ -105,7 +105,7 @@
 </> Food? Are you alright? Stuff that we eat every day to keep ourselves living? Otherwise we die?
 </> 
 </> <Name=Unicycle Wheel>
-</> We're wheels, we don't do anything to keep ourselves living. We just continue existing in perpetuity. I don't know what backwards universe you came from where you needed to consume things daily in order to stay alive, but we are not like that here.
+</> We're wheels, we don't do anything to keep ourselves living. We just continue existing in perpetuity. I don't know what messed up universe you came from where you needed to consume things daily in order to stay alive, but we are not like that here.
 </>
 </> <Name=MC>
 </> That... this is a lot to take in. What about water? Or the bathroom?
@@ -126,7 +126,7 @@
 </> Care to swap stories? I find that it helps when you're trying to adjust.
 </>
 </> <Name=MC>
-</> I was just a person, you know, out living my life. I had just graduated college, I had a sick job already lined up for me, everything was great.
+</> Yeah, maybe. I was just a person, you know, out living my life. I had just graduated college, I had a sick job already lined up for me, everything was great.
 </> 
 </> <Name=Unicycle Wheel>
 </> And then?
@@ -135,22 +135,22 @@
 </> And then Truck-kun showed up and isekai'd my grass into becoming a living door. 
 </> 
 </> <Name=Unicycle Wheel>
-</> Wait, you were reincarnated before becoming a wheel?
+</> Wait, you were reincarnated <i>before</i> becoming a wheel?
 </>
 </> <Name=MC>
-</> Yeah, I was on some stange island in the middle of an ocean. I remember seeing a really long bridge and a house in the distance, but right as I was about to make my way over, a missile flew in out of nowhere and killed me again, bringing me to now, standing here, as a wheel. 
+</> Yeah, I was on some stange island in the middle of an ocean. I remember seeing a really long bridge and a house in the distance, but right as I was about to make my way over, a missile flew in out of nowhere and killed me for the second time, bringing me to now, standing here, as a wheel. 
 </> 
 </> <Name=Unicycle Wheel>
-</> That, certainly is a strange story. The first I am aware of in fact. double reincarnating...
+</> That, certainly is a strange story. The first I am aware of in fact. Double reincarnating...
 </>
 </> <Name=MC>
-</> Is.. reincarnating once normal?
+</> Is,<Wait=0.5> reincarnating once normal?
 </> 
 </> <Name=Unicycle Wheel>
 </> Yeah, all of us were, that's how we got here.
 </>
 </> <Name=MC>
-</> So what's your story?
+</> You reincarnated as well? What's your story?
 </> 
 </> <Name=Unicycle Wheel>
 </> I was a necklace, living a beautiful life, but one day, out of the blue, I got dropped. Me, being a priceless necklace, I was so fragile that I shattered and died. That's when I woke up here, alive again, and a wheel.
@@ -159,6 +159,100 @@
 </> Was.. everyone here like that?
 </> 
 </> <Name=Unicycle Wheel>
-</> Yeah, you're the only one who had some kind of intermediary life between your past and present. Interesting... Very interesting...
+</> Yeah, you're the only one who had some kind of intermediary life between your past and present. All of us were different things who died, only to arrive here instead of the afterlife.
 </> 
+</> <Name=MC>
+</> Maybe this <i>is</i> the afterlife.
+</> 
+</> <Name=Unicycle Wheel>
+</> I don't think so. Pizza Wheel spent a long time investigating that idea, actually, and basically came up with nothing, saying they lacked "sufficiently sturdy evidence".
+</> 
+</> <Name=MC>
+</> Pizza Wheel? Is that another one of the people here?
+</> 
+</> <Name=Unicycle Wheel>
+</> Yeah, although they don't leave the lab much.
+</> 
+</> <Name=MC>
+</> I hate to keep throwing more questions at you, but why is their name Pizza Wheel, and not just, you know, Pizza.
+</> 
+</> <Name=Unicycle Wheel>
+</> Well, they're a wheel.
+</> 
+</> <Name=MC>
+</> Yeah, but like, my apparent new name, Steering Wheel, makes sense to end in wheel, as you can't just refer to me as "Steering".
+</> 
+</> <Name=Unicycle Wheel>
+</> Ya.
+</> 
+</> <Name=MC>
+</> And with your name, a Unicycle is an object by itself, but saying "Wheel" makes sense, as you are specifying a part of the whole.
+</> 
+</> <Name=Unicycle Wheel>
+</> Yep, uh huh.
+</> 
+</> <Name=MC>
+</> But a pizza, that doesn't have a wheel part. It's just pizza.
+</> 
+</> <Name=Unicycle Wheel>
+</> But pizza is a wheel.
+</> 
+</> <Name=MC>
+</> e-what?
+</> 
+</> <Name=Unicycle Wheel>
+</> Yeah. It's a circle, you can spin it, and anything a wheel can do, you can do with a pizza.<br>So it's a wheel.
+</> 
+</> <Name=MC>
+</> Even if you consider pizza to be a wheel, which is kind of crazy in of itself, you wouldn't refer to one, by name, as a wheel. You would just say pizza.
+</> 
+</> <Name=Unicycle Wheel>
+</> But we're talking about a person here, not an object. Pizza Wheel is their name.
+</> 
+</> <Name=MC>
+</> But-<Wait=1>Wha-<Wait=1>No, wait, hold on, I just realized something else, how do you know what a pizza is, but not what food is?
+</> 
+</> <Name=Unicycle Wheel>
+</> A pizza is a pizza.
+</> 
+</> <Name=MC>
+</> A pizza is also food. That you eat.
+</> 
+</> <Name=Unicycle Wheel>
+</> I still don't really understand this food concept.
+</> 
+</> <Name=MC>
+</> What do you do with a pizza, if you don't eat it?
+</> 
+</> <Name=Unicycle Wheel>
+</> I-<Wait=0.8> You know I don't really know.
+</> 
+</> <Name=MC>
+</> Ohmy-This is going nowhere.
+</> 
+</> <Name=Unicycle Wheel>
+</> I don't know, I think it's kind of fun. I don't really get to talk this much with anyone, so this is nice.
+</> 
+</> <Name=MC>
+</> You don't?
+</> 
+</> <Name=Unicycle Wheel>
+</> Yeah, I don't know, I just don't really get along that well with anyone here.
+</> 
+</> <Name=MC>
+</> I see, well, would you care to show me around, then? I really have no idea where I am.
+</> 
+</> <Name=Unicycle Wheel>
+</> I would but, I have a lot of chairs to admire.
+</> 
+</> <Name=MC>
+</> The chairs?
+</> 
+</> <Name=Unicycle Wheel>
+</> You wouldn't get it. Oh, but if you are going to go out and explore, I put some chairs in the hallways earlier. I'm going to move them in a minute, but I have to finish my admiring.
+</> 
+</> <Name=MC>
+</> Alright, well, see you later I guess.
+</> <Event=StartingFreedom> <End> 
+
 

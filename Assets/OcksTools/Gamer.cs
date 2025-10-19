@@ -18,6 +18,10 @@ public class Gamer : MonoBehaviour
     public List<TimedObject> Nerds = new List<TimedObject>();
     private void Awake()
     {
+        GlobalEvent.Append("StartingFreedom", StartingFreedom);
+        GlobalEvent.Append("UWheelReveal", UWheelReveal);
+
+
         ConsoleLol.ConsoleCommandHook.Append(CreateWheelCommands);
         Instance = this;
         characters.Clear();
@@ -271,7 +275,15 @@ public class Gamer : MonoBehaviour
             ));
     }
 
-    [AddToEvent("UWheelReveal")]
+    public void StartingFreedom()
+    {
+        Debug.Log("retun");
+        DisablePlayerCamera = false;
+        CameraLol.Instance.targetpos = CameraLol.Instance.transform.position;
+        CameraLol.Instance.ppos = CameraLol.Instance.transform.position;
+        CameraLol.DisableCamera = false;
+    }
+
     public void UWheelReveal()
     {
         Gamer.Instance.StartCoroutine(UWheelReveal2());
