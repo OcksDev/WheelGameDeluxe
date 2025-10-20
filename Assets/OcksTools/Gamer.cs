@@ -16,6 +16,7 @@ public class Gamer : MonoBehaviour
     public static Gamer Instance;
     public long GameTime = 0;
     public List<TimedObject> Nerds = new List<TimedObject>();
+    public List<CharacterInteractionNerd> CharNerds = new List<CharacterInteractionNerd>();
     private void Awake()
     {
         GlobalEvent.Append("StartingFreedom", StartingFreedom);
@@ -36,7 +37,7 @@ public class Gamer : MonoBehaviour
         characters.Add(new GearWheel());
         characters.Add(new OfficeChairWheel());
         characters.Add(new PileOfLegoWheelsWheel());
-        characters.Add(new WoodWheel());
+        characters.Add(new WagonWheel());
         characters.Add(new SawbladeWheel());
         foreach (var a in characters)
         {
@@ -277,11 +278,11 @@ public class Gamer : MonoBehaviour
 
     public void StartingFreedom()
     {
-        Debug.Log("retun");
         DisablePlayerCamera = false;
         CameraLol.Instance.targetpos = CameraLol.Instance.transform.position;
         CameraLol.Instance.ppos = CameraLol.Instance.transform.position;
         CameraLol.DisableCamera = false;
+        Camera.main.orthographicSize = 4f;
     }
 
     public void UWheelReveal()

@@ -239,6 +239,7 @@ public class ConsoleCommands : MonoBehaviour
                     LanguageFileSystem.Instance.GetString("Console", "Message_StoppedDialog")
 
                 ), "#bdbdbdff");
+                Gamer.Instance.StartingFreedom();
                 break;
             default:
                 if (DialogLol.Instance.LanguageFileIndexes.ContainsKey(r.com_caps[1]))

@@ -69,7 +69,6 @@ public class TimedObject : MonoBehaviour
             if (a.Position != default) transform.position = a.Position;
             gameObject.SetActive(a.Enabled);
         }
-        CurrentDesiredDialog = a.Dialog;
     }
 
 }
@@ -97,5 +96,4 @@ public class TimedActionBased
     public bool IgnoreAction = false;
     public Vector3 Position = default;
     public bool Enabled = true;
-    public string Dialog = "";
 }

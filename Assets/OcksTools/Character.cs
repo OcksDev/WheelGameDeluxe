@@ -142,11 +142,11 @@ public class MonsterTruckWheel : Character
         WheelImage = Gamer.Instance.sprites[10];
     }
 }
-public class WoodWheel : Character
+public class WagonWheel : Character
 {
     public override void Init()
     {
-        Name = "Wood Wheel";
+        Name = "Wagon Wheel";
         WheelImage = Gamer.Instance.sprites[11];
     }
 }
