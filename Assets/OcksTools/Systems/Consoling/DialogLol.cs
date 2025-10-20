@@ -492,6 +492,14 @@ public class DialogLol : MonoBehaviour
                 GlobalEvent.Invoke(data);
                 succeeded = true;
                 break;
+            case "CanonEvent":
+                Gamer.Instance.AddEvented(new CanonEvent(data));
+                succeeded = true;
+                break;
+            case "NonCanonEvent":
+                Gamer.Instance.AddEvented(new NonCanonEvent(data));
+                succeeded = true;
+                break;
             default:
                 if(!ignorewarning)Debug.LogWarning("Unknown Dialog Attribute: \"" + key + "\"  (Dialog File: " + ActiveFileName + ")");
                 break;

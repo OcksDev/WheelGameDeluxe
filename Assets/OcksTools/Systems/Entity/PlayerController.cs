@@ -8,6 +8,11 @@ public class PlayerController : MonoBehaviour
     public float move_speed = 2;
     public float decay = 0.8f;
     private Vector3 move = new Vector3(0, 0, 0);
+    public static PlayerController Instance;
+    private void Awake()
+    {
+        Instance = this;
+    }
     private void Start()
     {
         rigid= GetComponent<Rigidbody2D>();

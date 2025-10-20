@@ -21,6 +21,8 @@ public class Gamer : MonoBehaviour
     {
         GlobalEvent.Append("StartingFreedom", StartingFreedom);
         GlobalEvent.Append("UWheelReveal", UWheelReveal);
+        GlobalEvent.Append("ShowPaper", UWheelReveal);
+        GlobalEvent.Append("HidePaper", UWheelReveal);
 
 
         ConsoleLol.ConsoleCommandHook.Append(CreateWheelCommands);

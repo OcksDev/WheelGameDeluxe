@@ -17,6 +17,10 @@ public class Character
     {
         Name = "Unknown";
     }
+    public virtual string GetPreferredDialog()
+    {
+        throw new System.Exception("No dialog found to play!");
+    }
     public bool HasEvented(string a)
     {
         return Events.ContainsKey(a);

@@ -4,10 +4,11 @@ using UnityEngine;
 public class CharacterInteractionNerd : MonoBehaviour
 {
     TimedObject to;
-    public float offset = 1f;
+    InteractionEntity ie;
     void Start()
     {
         to = GetComponent<TimedObject>();
+        ie = GetComponent<InteractionEntity>();
         Gamer.Instance.CharNerds.Add(this);
         StartCoroutine(banana());
     }
@@ -16,9 +17,6 @@ public class CharacterInteractionNerd : MonoBehaviour
         yield return new WaitForFixedUpdate();
 
         GetComponent<SpriteRenderer>().sprite = to.CharacterLink.WheelImage;
-    }
-    public string GetPreferredDialog()
-    {
-        throw new System.Exception("Bad");
+        ie.OnInteract.Append(() => DialogLol.Instance.StartDialog(to.CharacterLink.GetPreferredDialog()));
     }
 }
