@@ -1,0 +1,9 @@
+-Test Dialog-
+</> <Name=MC>
+</> Hey, I found this strange paper on the floor. Any idea what it means?
+</> 
+</> <Name=Unicycle Wheel>
+</> Let me see...<br>Nope, no idea. I'm going back to my admiring.
+</> <CanonEvent=PaperExplained> <End>
+
+

@@ -7,6 +7,7 @@ public class InteractionEntity : MonoBehaviour
     public string BasicStartDialog = "";
     public float Offset = 1;
     public float InterDistSQ = 3;
+    public bool AllowInteract = true;
     [HideInInspector]
     public TextMeshProUGUI Displaytext;
     public OXEvent OnInteract = new OXEvent();
@@ -24,19 +25,20 @@ public class InteractionEntity : MonoBehaviour
     {
         if(PlayerController.Instance == null) return;
         var xx = RandomFunctions.DistNoSQRT(transform.position, PlayerController.Instance.transform.position);
-        if(xx <= InterDistSQ && !was)
+        bool goodcheeks = AllowInteract;
+        if(xx <= InterDistSQ && !was && goodcheeks)
         {
             Displaytext.gameObject.SetActive(true);
             Displaytext.text = InputManager.keynames[InputManager.gamekeys["interact"][0]];
             Displaytext.transform.position = transform.position + (Vector3.up * Offset);
             was = true;
         }
-        else if(xx >= InterDistSQ && was)
+        else if((xx >= InterDistSQ && was) || !goodcheeks)
         {
             Displaytext.gameObject.SetActive(false);
             was = false;
         }
-        if(was && InputManager.IsKeyDown("interact", "Player"))
+        if(was && InputManager.IsKeyDown("interact", "Player") && goodcheeks)
         {
             OnInteract.Invoke();
         }
@@ -54,7 +56,7 @@ public class InteractionEntity : MonoBehaviour
                 Gamer.Instance.AddEvented(new CanonEvent("PaperFound"));
                 break;
         }
-        if(BasicStartDialog != null)
+        if(BasicStartDialog != "")
         {
             DialogLol.Instance.StartDialog(BasicStartDialog);
         }

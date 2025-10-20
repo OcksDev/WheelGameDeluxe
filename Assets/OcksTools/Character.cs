@@ -19,7 +19,7 @@ public class Character
     }
     public virtual string GetPreferredDialog()
     {
-        throw new System.Exception("No dialog found to play!");
+        return "ERROR NO DIALOG FOR THIS CHARACTER";
     }
     public bool HasEvented(string a)
     {
@@ -72,6 +72,29 @@ public class UnicycleWheel : Character
                 a.Value.LikeScore -= 25;
             }
         }
+    }
+    public override string GetPreferredDialog()
+    {
+        var g = Gamer.Instance;
+        string pp = "ImBusy";
+        if (!g.HasEvented("FinishedBusy"))
+        {
+            if (g.HasEvented("StillAdding"))
+            {
+                pp = "Busy1";
+            }
+            if (g.HasEvented("StillAdding2"))
+            {
+                pp = "Busy2";
+            }
+        }
+        if (g.HasEvented("PaperFoundReal") && !g.HasEvented("PaperExplained"))
+        {
+            pp = "PaperExplain";
+        }
+
+
+        return pp;
     }
 }
 public class GearWheel : Character

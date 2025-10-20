@@ -913,6 +913,7 @@ public class DialogLol : MonoBehaviour
                             pp.sprr = sprr;
                             pp.sprl = sprl;
                             pp.UpdateColor();
+                            pp.UpdateText();
                         }
                     }
                     else

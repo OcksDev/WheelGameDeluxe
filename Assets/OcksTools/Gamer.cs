@@ -21,8 +21,8 @@ public class Gamer : MonoBehaviour
     {
         GlobalEvent.Append("StartingFreedom", StartingFreedom);
         GlobalEvent.Append("UWheelReveal", UWheelReveal);
-        GlobalEvent.Append("ShowPaper", UWheelReveal);
-        GlobalEvent.Append("HidePaper", UWheelReveal);
+        GlobalEvent.Append("ShowPaper", ShowPaper);
+        GlobalEvent.Append("HidePaper", HidePaper);
 
 
         ConsoleLol.ConsoleCommandHook.Append(CreateWheelCommands);
@@ -57,6 +57,15 @@ public class Gamer : MonoBehaviour
 
         //GlobalEvent.Append("UWheelReveal", UWheelReveal);
     }
+
+    public void ResetAll()
+    {
+        CameraLol.DisableCamera = false;
+        DisablePlayerCamera = false;
+        InputManager.ResetLockLevel();
+        Tags.refs["Paper"].transform.position = Tags.refs["Pos2"].transform.position;
+    }
+
     private void Start()
     {
         if (DeveloperFlags.HasFlag(DevFlags.NoIntro))
@@ -132,6 +141,11 @@ public class Gamer : MonoBehaviour
             d.color = e;
         }
         ));
+        if (DeveloperFlags.HasFlag(DevFlags.SkipToRealStart))
+        {
+            StartingFreedom();
+            yield break;
+        }
         yield return new WaitForSeconds(0.5f);
         yield return OXLerp.Linear((x) =>
         {
@@ -168,7 +182,14 @@ public class Gamer : MonoBehaviour
         checks[0] = a;
         if (a)
         {
-            StartCoroutine(Mainmenuanim());
+            if (DeveloperFlags.HasFlag(DevFlags.SkipToRealStart))
+            {
+                StartGameClick();
+            }
+            else
+            {
+                StartCoroutine(Mainmenuanim());
+            }
         }
         UpdateMenus();
     }
@@ -264,6 +285,7 @@ public class Gamer : MonoBehaviour
         None = 0,
         NoIntro = 1 << 1,
         DialogSkipAllowed = 1 << 2,
+        SkipToRealStart = 1 << 3,
     }
 
     public void CreateWheelCommands()
@@ -285,6 +307,7 @@ public class Gamer : MonoBehaviour
         CameraLol.Instance.ppos = CameraLol.Instance.transform.position;
         CameraLol.DisableCamera = false;
         Camera.main.orthographicSize = 4f;
+        InputManager.RemoveLockLevel("Dialog");
     }
 
     public void UWheelReveal()
@@ -300,6 +323,32 @@ public class Gamer : MonoBehaviour
             CameraLol.Instance.transform.position = Vector3.Lerp(new Vector3(0, -0.6f, -10), new Vector3(2.8f, -1.2f, -10), dd);
             Camera.main.orthographicSize = Mathf.Lerp(2, 4, dd);
         }, 1.2f);
+    }
+    public void ShowPaper()
+    {
+        Gamer.Instance.StartCoroutine(ShowPaper2());
+    }
+    public void HidePaper()
+    {
+        Gamer.Instance.StartCoroutine(HidePaper2());
+    }
+
+    public IEnumerator ShowPaper2()
+    {
+        yield return OXLerp.Linear((x) =>
+        {
+            var dd = RandomFunctions.EaseIn(x);
+            Tags.refs["Paper"].transform.position = Vector3.Lerp(Tags.refs["Pos2"].transform.position, Tags.refs["Pos1"].transform.position, dd);
+        }, 0.75f);
+    }
+    
+    public IEnumerator HidePaper2()
+    {
+        yield return OXLerp.Linear((x) =>
+        {
+            var dd = RandomFunctions.EaseOut(x);
+            Tags.refs["Paper"].transform.position = Vector3.Lerp(Tags.refs["Pos1"].transform.position, Tags.refs["Pos2"].transform.position, dd);
+        }, 0.75f);
     }
 
 }

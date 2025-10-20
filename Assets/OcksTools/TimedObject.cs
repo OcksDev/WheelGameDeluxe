@@ -10,11 +10,13 @@ public class TimedObject : MonoBehaviour
     public TimedActionBased DefaultState;
     public List<TimedAction> bb = new List<TimedAction>();
     public string CurrentDesiredDialog = "";
+    private InteractionEntity ie;
     private void Start()
     {
         if(Character != "")
         {
             CharacterLink = Gamer.Instance.characterdict[Character];
+            ie = GetComponent<InteractionEntity>();
         }
         if(DefaultState.Position == default)
         {
@@ -60,6 +62,10 @@ public class TimedObject : MonoBehaviour
                     if (CharacterLink.HasEvented(a.TargetEvent)) DoAction(a);
                     break;
             }
+        }
+        if(CharacterLink != null && ie != null)
+        {
+            ie.AllowInteract = CharacterLink.GetPreferredDialog() != "";
         }
     }
     public void DoAction(TimedActionBased a)

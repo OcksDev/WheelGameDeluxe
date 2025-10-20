@@ -1,6 +1,18 @@
 -Test Dialog-
 </> <Name=MC>
-</> What's this?
+</> <Event=ShowPaper>What's this? A piece of paper?
 </> 
+</> <Name=MC>
+</> What's it even mean? A complete setting? A final wheel?
+</> 
+</> <Name=MC>
+</> Clearly it's refering to me, and that I'm somehow "final". Does that mean I am going to be last one to show up here?
+</> 
+</> <Name=MC>
+</> If so, that's an odd way to phrase it. Also, this completed "setting" is an utter unknown.
+</> 
+</> <Name=MC>
+</> Unicycle Wheel doesn't seem that interested in it, so, <Event=HidePaper>I guess I'll just pocket this.
+</> <CanonEvent=PaperFoundReal> <End>
 
 
