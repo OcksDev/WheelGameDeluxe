@@ -5,6 +5,7 @@ using System.Data.SqlTypes;
 using System.IO;
 using System.Linq;
 using System.Security.Cryptography;
+using System.Text.RegularExpressions;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
@@ -692,20 +693,27 @@ public class DialogLol : MonoBehaviour
         ConsoleLol.Instance.ConsoleLog(datatype + ": " + ActiveFileName, "#bdbdbdff");
         NextLine();
     }
-
+    public Color32 NamedCharacterColor;
     public List<string> GetFormattedFromFile(string filename, string datat = "Dialog")
     {
         List<string> str = null;
+        string dd = "";
         if(GetUseLFS())
         {
-            str =
-        new List<string>(LanguageFileSystem.Instance.GetString(LanguageFileIndexes[filename], "").Split("</>"));
+            dd = LanguageFileSystem.Instance.GetString(LanguageFileIndexes[filename], "");
         }
         else
         {
-            str = new List<string>(LanguageFileIndexes[filename].GetDefaultData().Split("</>"));
+            dd = LanguageFileIndexes[filename].GetDefaultData();
         }
-        
+        foreach(var d in Gamer.Instance.characters)
+        {
+            string aa = d.Name;
+            if (aa == "MC") aa = "Steering Wheel";
+            dd = Regex.Replace(dd, $"(?<!=)({aa})", $"<color=#{NamedCharacterColor.ColorToString()}>{aa}</color>");
+        }
+        str = new List<string>(dd.Split("</>"));
+        // 
         string d1 = str[0];
         ActiveFileName = d1.Split(Environment.NewLine)[0];
         if(datat != "Choose")str.RemoveAt(0);

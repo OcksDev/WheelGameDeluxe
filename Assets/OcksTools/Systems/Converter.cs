@@ -378,6 +378,10 @@ public static class Converter
     {
         return ColorUtility.ToHtmlStringRGB(cc);
     }
+    public static string ColorToString(this Color32 cc)
+    {
+        return ColorUtility.ToHtmlStringRGB(cc);
+    }
 
     public static Color32 StringToColor(this string hex, string fallback = "FFFFFF")
     {

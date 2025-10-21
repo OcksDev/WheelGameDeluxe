@@ -8,31 +8,31 @@
 </> <Name=MC>
 </> It's like, like, I'm not a door anymore...<br>Wait a minute-
 </> 
-</> <Name=Unkown>
+</> <Name=Unknown>
 </> Hey look, a new arrival! Sweet!
 </> 
 </> <Name=MC>
 </> I feel.. round.<br>Does that even make sense?
 </> 
-</> <Name=Unkown>
+</> <Name=Unknown>
 </> Uhhh?
 </> 
 </> <Name=MC>
 </> First, I am just living my life, then I become a door of all things, and now, a wheel? What has my life become?
 </> 
-</> <Name=Unkown>
+</> <Name=Unknown>
 </> Hello? Can you even hear me?
 </> 
 </> <Name=MC>
 </> Alright, well, this is a lot to take in right now, but I guess let's tackle things one at a time. Who is talking to me right now?
 </> 
-</> <Name=Unkown>
+</> <Name=Unknown>
 </> Umm? <Event=UWheelReveal>I am?
 </> 
 </> <Name=MC>
 </> Sorry, I meant, what is your name?
 </> 
-</> <Name=Unkown>
+</> <Name=Unknown>
 </> Oh, well, I guess that would make sense. My name is <Name=Unicycle Wheel>Unicycle Wheel. What's yours?
 </> 
 </> <Name=MC>

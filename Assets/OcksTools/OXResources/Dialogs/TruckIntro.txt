@@ -1,11 +1,11 @@
 -Test Dialog-
-</> <Name=Unc>
+</> <Name=Unknown>
 </> Howdy there, you a newbie?
 </> 
 </> <Name=MC>
 </> Yeah, I just arrived. Honestly, this is all still a lot to take in.
 </> 
-</> <Name=Unc>
+</> <Name=Unknown>
 </> Hah! I remember my first days too, strange times, I'm <Name=Monster Truck Wheel>Monster Truck Wheel by the way, nice to meet you.
 </> 
 </> <Name=MC>
@@ -33,16 +33,16 @@
 </> You see, I used to be a basketball before becoming a wheel, I spent all my days bouncing on the court and dunking hoops, but one day, I was deflated by some group of nobodies who thought it would be a funny prank. Anyway, long story short, that killed me, and I think you can imagine the rest. 
 </> 
 </> <Name=MC>
-</> That makes sense, I guess, so it really seems like everyone used to be a different object before becoming a wheel.
+</> That makes sense, I guess, so it really seems like everyone here used to be a different object before becoming a wheel.
 </> 
 </> <Name=Monster Truck Wheel>
-</> Yep, nothing makes us bond more than a shared past, though, am I right?
+</> Yep, nothing makes us bond more than a shared past, am I right?
 </> 
 </> <Name=MC>
 </> Don't we all have explicitly different pasts?
 </> 
 </> <Name=Monster Truck Wheel>
-</> That's what makes us so similar. We are all so radically from where we come from and who we are, that it wraps around into becoming a shared hardship.
+</> That's what makes us so similar. We are all so radically different in where we come from and who we are, that it wraps around into becoming a shared hardship.
 </> 
 </> <Name=MC>
 </> Don't we all have explicitly different pasts?
