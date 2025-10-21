@@ -168,6 +168,13 @@ public class MonsterTruckWheel : Character
         Name = "Monster Truck Wheel";
         WheelImage = Gamer.Instance.sprites[10];
     }
+    public override string GetPreferredDialog()
+    {
+        var g = Gamer.Instance;
+        string pp = "TruckIntro";
+
+        return pp;
+    }
 }
 public class WagonWheel : Character
 {

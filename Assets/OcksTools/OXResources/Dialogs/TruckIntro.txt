@@ -1,0 +1,51 @@
+-Test Dialog-
+</> <Name=Unc>
+</> Howdy there, you a newbie?
+</> 
+</> <Name=MC>
+</> Yeah, I just arrived. Honestly, this is all still a lot to take in.
+</> 
+</> <Name=Unc>
+</> Hah! I remember my first days too, strange times, I'm <Name=Monster Truck Wheel>Monster Truck Wheel by the way, nice to meet you.
+</> 
+</> <Name=MC>
+</> Likewise, and my name is Steering Wheel.
+</> 
+</> <Name=Monster Truck Wheel>
+</> It's always great to have a new wheel every once in a while, keeps the place lively. Just how I like it.
+</> 
+</> <Name=MC>
+</> Lively, yes, in the middle of this empty gym.
+</> 
+</> <Name=Monster Truck Wheel>
+</> Well I was playing basketball, it's a fun sport, you should try it sometime.
+</> 
+</> <Name=MC>
+</> It's kind of hard to play when you don't have arms. Actually, I don't see any nets, or balls, so how are you playing basketball?
+</> 
+</> <Name=Monster Truck Wheel>
+</> I was playing it in my mind.
+</> 
+</> <Name=MC>
+</> How were you-
+</> 
+</> <Name=Monster Truck Wheel>
+</> You see, I used to be a basketball before becoming a wheel, I spent all my days bouncing on the court and dunking hoops, but one day, I was deflated by some group of nobodies who thought it would be a funny prank. Anyway, long story short, that killed me, and I think you can imagine the rest. 
+</> 
+</> <Name=MC>
+</> That makes sense, I guess, so it really seems like everyone used to be a different object before becoming a wheel.
+</> 
+</> <Name=Monster Truck Wheel>
+</> Yep, nothing makes us bond more than a shared past, though, am I right?
+</> 
+</> <Name=MC>
+</> Don't we all have explicitly different pasts?
+</> 
+</> <Name=Monster Truck Wheel>
+</> That's what makes us so similar. We are all so radically from where we come from and who we are, that it wraps around into becoming a shared hardship.
+</> 
+</> <Name=MC>
+</> Don't we all have explicitly different pasts?
+</> 
+
+
