@@ -79,7 +79,7 @@ public class UnicycleWheel : Character
     {
         var g = Gamer.Instance;
         string pp = "ImBusy";
-        if (!HasEvented("LonelyTogether"))
+        if (!HasEvented("LonelyTogether") && !g.HasEvented("LeaveStart"))
         {
             if (g.HasEvented("StillAdding"))
             {
