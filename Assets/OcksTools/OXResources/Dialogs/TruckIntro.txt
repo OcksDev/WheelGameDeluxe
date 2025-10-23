@@ -33,7 +33,7 @@
 </> You see, I used to be a basketball before becoming a wheel, I spent all my days bouncing on the court and dunking hoops, but one day, I was deflated by some group of nobodies who thought it would be a funny prank. Anyway, long story short, that killed me, and I think you can imagine the rest. 
 </> 
 </> <Name=MC>
-</> That makes sense, I guess, so it really seems like everyone here used to be a different object before becoming a wheel.
+</> That makes sense, I guess, so everyone here really did reincarnate from different objects before becoming a wheel.
 </> 
 </> <Name=Monster Truck Wheel>
 </> Yep, nothing makes us bond more than a shared past, am I right?
@@ -45,7 +45,58 @@
 </> That's what makes us so similar. We are all so radically different in where we come from and who we are, that it wraps around into becoming a shared hardship.
 </> 
 </> <Name=MC>
-</> Don't we all have explicitly different pasts?
+</> I guess?
 </> 
+</> <Name=Monster Truck Wheel>
+</> Hey, cheer up, we're all in this together.
+</> 
+</> <Name=MC>
+</> That we are, and speaking of everyone in the school, where is everyone? I get that Unicycle Wheel was alone, because,<Wait=1> well anyway, where is everyone else?
+</> 
+</> <Name=Monster Truck Wheel>
+</> We tend to just hang around. Sometimes we gather for certain events, other times we split up. Right now, everyone is kind of doing their own thing.
+</> 
+</> <Name=MC>
+</> I see.
+</> 
+</> <Name=Monster Truck Wheel>
+</> The reason is because Here in Wheel Civilization, there isn't a day/night cycle, and we don't sleep either. Still, coming from worlds where sleeping was a thing, we tend to follow similar patterns.
+</> 
+</> <Name=MC>
+</> Back up there, you know what sleeping is?
+</> 
+</> <Name=Monster Truck Wheel>
+</> Of course I do.
+</> 
+</> <Name=MC>
+</> Do <i>you</i> know what food is?
+</> 
+</> <Name=Monster Truck Wheel>
+</> No, what's that?
+</> 
+</> <Name=MC>
+</> I don't feel like having this conversation again.
+</> 
+</> <Name=Monster Truck Wheel>
+</> Did we talk before? I swear I would have remembered you.
+</> 
+</> <Name=MC>
+</> No, this is our first time meeting, it's just that I already had a whole conversation about what food was.
+</> 
+</> <Name=Monster Truck Wheel>
+</> Ah I see, does it matter if I know what this "food" is?
+</> 
+</> <Name=MC>
+</> I guess it doesn't.
+</> 
+</> <Name=Monster Truck Wheel>
+</> Perfect, then feel free to not strain yourself. If I don't need to know something then I am completely fine with not knowing.
+</> <Event=TruckPaper>
+</> <Name=MC>
+</> Noted. By the way, can you give me some directions? From what I have gathered, Pizza Wheel seems to have analysed this place, and well, I think I might need them to explain some things to me. 
+</> <Scene=TruckDir>
+
+
+
 
 

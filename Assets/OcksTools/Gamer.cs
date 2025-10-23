@@ -23,6 +23,7 @@ public class Gamer : MonoBehaviour
         GlobalEvent.Append("UWheelReveal", UWheelReveal);
         GlobalEvent.Append("ShowPaper", ShowPaper);
         GlobalEvent.Append("HidePaper", HidePaper);
+        GlobalEvent.Append("TruckPaper", TruckPaper);
 
 
         ConsoleLol.ConsoleCommandHook.Append(CreateWheelCommands);
@@ -327,6 +328,11 @@ public class Gamer : MonoBehaviour
     public void ShowPaper()
     {
         Gamer.Instance.StartCoroutine(ShowPaper2());
+    }
+
+    public void TruckPaper()
+    {
+        if (HasEvented("PaperFoundReal")) DialogLol.Instance.StartDialog("TruckPaper");
     }
     public void HidePaper()
     {

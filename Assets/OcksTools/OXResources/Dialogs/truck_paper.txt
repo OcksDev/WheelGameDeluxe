@@ -1,0 +1,19 @@
+-Test Dialog-
+</> <Name=MC>
+</> Noted. By the way, any idea what this paper means? I found it on the floor near where I woke up.
+</>
+</> <Name=Monster Truck Wheel>
+</> Oh those are pretty common. They have some basic information about the person who just got brought here.
+</> 
+</> <Name=MC>
+</> Mine wasn't like that.
+</>
+</> <Name=Monster Truck Wheel>
+</> Hmm? Let me see here...
+Oh, that is strange. I must say, I have no idea what this is. I'd reccomend asking Pizza Wheel about it.
+</> 
+</> <Name=MC>
+</> Can you give me directions to get there? I was already meaning to talk with them.
+</> <Scene=TruckDir>
+
+

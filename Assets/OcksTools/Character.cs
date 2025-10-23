@@ -185,6 +185,13 @@ public class MonsterTruckWheel : Character
 
         return pp;
     }
+    public override void SetInitalRelations()
+    {
+        foreach (var a in Ships)
+        {
+            a.Value.LikeScore += 15;
+        }
+    }
 }
 public class WagonWheel : Character
 {
