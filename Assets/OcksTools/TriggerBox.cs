@@ -10,6 +10,7 @@ public class TriggerBox : MonoBehaviour
         var dingle = new TimedAction();
         dingle.ActionTime = TimedAction.Times.AfterEvent;
         dingle.TargetEvent = Event;
+        dingle.Enabled = false;
         bananas.bb.Add(dingle);
     }
 
