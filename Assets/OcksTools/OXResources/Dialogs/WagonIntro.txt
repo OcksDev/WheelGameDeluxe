@@ -1,0 +1,49 @@
+-Test Dialog-
+</> <Name=MC>
+</> Hello there.
+</> 
+</> <Name=Unknown>
+</> Ah, um, hello. Are you new here?
+</> 
+</> <Name=MC>
+</> I am, can I get your name?
+</> 
+</> <Name=Unknown>
+</> Oh, um, of course, I am <Name=Wagon Wheel>Wagon Wheel. You?
+</> 
+</> <Name=MC>
+</> Steering Wheel.
+</> 
+</> <Name=Wagon Wheel>
+</> Nice to meet you, um, Steering Wheel-kun.
+</> 
+</> <Name=MC>
+</> kun?
+</> 
+</> <Name=Wagon Wheel>
+</> It's nothing.
+</> 
+</> <Name=MC>
+</> I see, well, what are you doing behind all those chairs?
+</> 
+</> <Name=Wagon Wheel>
+</> Unicycle Wheel put them there, and, I don't feel like moving them.
+</> 
+</> <Name=MC>
+</> I meant, why are you standing behind them in this otherwise empty room?
+</> 
+</> <Name=Wagon Wheel>
+</> I'm looking for a teddy bear. Sawblade Wheel said they, um, lost it, and I am trying to help them find it.
+</> 
+</> <Name=MC>
+</> Sawblade Wheel? How many people are trapped here?
+</> 
+</> <Name=Wagon Wheel>
+</> I think with you there's, um, 12? There are a few extras as well, but they don't matter.
+</> 
+</> <Name=MC>
+</> You're calling people, extras?
+</> 
+</> <Name=Wagon Wheel>
+</> Well yeah, that's what they were designated as on their arrival paper.
+</> <Event=PaperCheck> <Scene=*Scene>
