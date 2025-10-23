@@ -191,22 +191,27 @@ public class DialogLol : MonoBehaviour
                 upt();
                 if (cp3 <= 0)
                 {
-                    string e = GetText();
+                    string ee = GetText();
+                    string e = ee;
                     if(e.Length > 0)
                     {
                         e = e.Substring(e.Length-1,1);
                     }
-                    if (e == " " || e.Contains("\n"))
+                    Console.Log($"{charl}, {fulltext.Length}");
+                    if(charl < fulltext.Length)
                     {
-                        cp3 = e == " " ? cps2 : cps3;
-                    }
-                    else if(e == "," || e == ";" || e == ":")
-                    {
-                        cp3 = pps;
-                    }
-                    else if(e == "." || e == "!" || e == "?")
-                    {
-                        cp3 = pps2;
+                        if (e == " " || e.Contains("\n"))
+                        {
+                            cp3 = e == " " ? cps2 : cps3;
+                        }
+                        else if (e == "," || e == ";" || e == ":")
+                        {
+                            cp3 = pps;
+                        }
+                        else if (e == "." || e == "!" || e == "?")
+                        {
+                            cp3 = pps2;
+                        }
                     }
                     if (PlaySoundOnType != "" && !baldcharacters.Contains(e))
                     {
@@ -499,6 +504,11 @@ public class DialogLol : MonoBehaviour
                 break;
             case "NonCanonEvent":
                 Gamer.Instance.AddEvented(new NonCanonEvent(data));
+                succeeded = true;
+                break;
+            case "CharEvent":
+                list = new List<string>(data.Split(","));
+                Gamer.Instance.characterdict[list[0]].AddEvented(new NonCanonEvent(list[1]));
                 succeeded = true;
                 break;
             default:
@@ -902,6 +912,9 @@ public class DialogLol : MonoBehaviour
                             List<string> list = new List<string>(g.Split(", "));
                             List<string> list23 = new List<string>(g.Split("<"));
                             fulltext = str[linenum];
+
+                            fulltext = Regex.Replace(fulltext, @"[ \n\r\t]+$", "");
+
                             SetDefaultParams();
                             foreach (var attribute in list23)
                             {

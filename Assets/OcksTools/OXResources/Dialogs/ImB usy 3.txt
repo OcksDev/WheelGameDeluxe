@@ -1,0 +1,41 @@
+-Test Dialog-
+</> <Name=Unicycle Wheel>
+</> Do you need something?
+</>
+</> <Name=MC>
+</> I, just wanted to talk to you.
+</> 
+</> <Name=Unicycle Wheel>
+</> Really?
+</>
+</> <Name=MC>
+</> Yeah, I'm kind of very lonely right now, so it's nice being able to talk with someone.
+</> 
+</> <Name=Unicycle Wheel>
+</> I think I understand, I mean, I sometimes get that feeling myself.
+</>
+</> <Name=MC>
+</> About not getting along with anyone else here?
+</> 
+</> <Name=Unicycle Wheel>
+</> That, that exactly. It's just, I can't put it into words.
+</>
+</> <Name=MC>
+</> There's no need, I get what you mean. I was kind of a loner in my past life as well, so I have expiereced that distance first hand.
+</> 
+</> <Name=Unicycle Wheel>
+</> It's a sad shared expierence then.
+</>
+</> <Name=MC>
+</> Yeah, but hey, we loners can stick together.
+</> 
+</> <Name=Unicycle Wheel>
+</> That would be,<Wait=2> nice.
+</>
+</> <Name=MC>
+</> I have the same feeling. I really do need to go explore more about this place, but catch you later?
+</> 
+</> <Name=Unicycle Wheel>
+</> Sure!
+</> <CharEvent=Unicycle Wheel,LonelyTogether> <End>
+

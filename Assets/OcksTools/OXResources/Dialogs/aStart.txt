@@ -225,7 +225,13 @@
 </> What do you do with a pizza, if you don't eat it?
 </> 
 </> <Name=Unicycle Wheel>
-</> I-<Wait=0.8> You know I don't really know.
+</> Roll it, as pizza is a wheel.
+</> 
+</> <Name=MC>
+</> Why would you ever use a pizza as a wheel?
+</> 
+</> <Name=Unicycle Wheel>
+</> I didn't say it would be a good wheel, but that's what you would use one for.
 </> 
 </> <Name=MC>
 </> Ohmy-This is going nowhere.

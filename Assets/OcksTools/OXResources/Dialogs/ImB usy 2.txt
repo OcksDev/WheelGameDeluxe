@@ -3,7 +3,7 @@
 </> I thought you were going to go explore the area, the whole "I have no idea where I am" thing.
 </>
 </> <Name=MC>
-</> I was, but, well, I guess I just really wanted to talk to you.
-</> <End>
+</> I was, am, but, well, I dont know.
+</> <CanonEvent=StillAdding3> <End>
 
 

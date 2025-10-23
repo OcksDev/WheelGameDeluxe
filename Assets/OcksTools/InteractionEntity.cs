@@ -45,7 +45,7 @@ public class InteractionEntity : MonoBehaviour
     }
     private void OnDisable()
     {
-        Displaytext.gameObject.SetActive(false);
+        if(Displaytext != null && Displaytext.gameObject != null) Displaytext.gameObject.SetActive(false);
         was = false;
     }
     public void Coolbehoove()

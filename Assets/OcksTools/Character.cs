@@ -30,6 +30,7 @@ public class Character
     {
         Events.Add(a.Name, a);
         Gamer.Instance.UpdateAllNerds();
+        CompileThings();
     }
 
     public void CompileThings()
@@ -72,12 +73,13 @@ public class UnicycleWheel : Character
                 a.Value.LikeScore -= 25;
             }
         }
+        if(HasEvented("LonelyTogether")) Ships["MC"].LikeScore += 10;
     }
     public override string GetPreferredDialog()
     {
         var g = Gamer.Instance;
         string pp = "ImBusy";
-        if (!g.HasEvented("FinishedBusy"))
+        if (!HasEvented("LonelyTogether"))
         {
             if (g.HasEvented("StillAdding"))
             {
@@ -87,6 +89,14 @@ public class UnicycleWheel : Character
             {
                 pp = "Busy2";
             }
+            if (g.HasEvented("StillAdding3"))
+            {
+                pp = "Busy3";
+            }
+        }
+        else
+        {
+            pp = "";
         }
         if (g.HasEvented("PaperFoundReal") && !g.HasEvented("PaperExplained"))
         {
