@@ -1,0 +1,22 @@
+-Test Dialog-
+</> <Name=MC>
+</> That's kind of concerning, but what is this paper?
+</> 
+</> <Name=Wagon Wheel>
+</> Here in Wheel Civilization, when anyone first arrives, they have a piece of paper that appears with them.
+</> 
+</> <Name=MC>
+</> I must have missed this paper then.
+</> 
+</> <Name=Wagon Wheel>
+</> Likely, it should have been in the same room where you first arrived.
+</> 
+</> <Name=MC>
+</> Alright, well, I guess I'll leave you to your searching.
+</> 
+</> <Name=Wagon Wheel>
+</> Tell me if you find the bear, alright? Sawblade Wheel said it was very important that I look for it.
+</> 
+</> <Name=MC>
+</> Will do.
+</> <CanonEvent=WagonSpoken> <CanonEvent=WagonPaperMention> <End>

@@ -13,6 +13,6 @@
 </> 
 </> <Name=Monster Truck Wheel>
 </> See ya.
-</> <End>
+</> <CanonEvent=TruckTalk> <End>
 
 

@@ -1,0 +1,16 @@
+-Test Dialog-
+</> <Name=MC>
+</> That's kind of concerning.
+</> 
+</> <Name=Wagon Wheel>
+</> I try not to think about it.
+</> 
+</> <Name=MC>
+</> Cool, well, I guess I'll leave you to your searching.
+</> 
+</> <Name=Wagon Wheel>
+</> Tell me if you find the bear, alright? Sawblade Wheel said it was very important that I look for it.
+</> 
+</> <Name=MC>
+</> Will do.
+</> <CanonEvent=WagonSpoken> <End>

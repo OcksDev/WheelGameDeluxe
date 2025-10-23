@@ -1,0 +1,4 @@
+-Test Dialog-
+</> <Name=MC>
+</> GO AWAY
+</> <End>

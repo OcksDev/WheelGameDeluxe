@@ -32,6 +32,12 @@ public class Character
         Gamer.Instance.UpdateAllNerds();
         CompileThings();
     }
+    public void RemoveEvented(string a)
+    {
+        if (Events.ContainsKey(a)) Events.Remove(a);
+        Gamer.Instance.UpdateAllNerds();
+        CompileThings();
+    }
 
     public void CompileThings()
     {
@@ -200,6 +206,33 @@ public class WagonWheel : Character
         Name = "Wagon Wheel";
         WheelImage = Gamer.Instance.sprites[11];
     }
+
+    public override string GetPreferredDialog()
+    {
+        var g = Gamer.Instance;
+        string pp = "WagonIntro";
+        if (g.HasEvented("PaperFoundReal"))
+        {
+            if (g.HasEvented("WagonSpoken") && g.HasEvented("WagonPaperMention"))
+            {
+                pp = "WagonFullPaper";
+            }else if (g.HasEvented("WagonSpoken"))
+            {
+                pp = "";
+            }
+        }
+        else
+        {
+            if (g.HasEvented("WagonSpoken"))
+            {
+                pp = "WagonStillSearching";
+            }
+        }
+
+
+        return pp;
+    }
+
 }
 public class CatWheel : Character
 {

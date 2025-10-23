@@ -24,6 +24,7 @@ public class Gamer : MonoBehaviour
         GlobalEvent.Append("ShowPaper", ShowPaper);
         GlobalEvent.Append("HidePaper", HidePaper);
         GlobalEvent.Append("TruckPaper", TruckPaper);
+        GlobalEvent.Append("PaperCheck", PaperCheck);
 
 
         ConsoleLol.ConsoleCommandHook.Append(CreateWheelCommands);
@@ -106,6 +107,12 @@ public class Gamer : MonoBehaviour
     public bool HasEvented(string a)
     {
         return CanonEvents.ContainsKey(a);
+    }
+    
+    public  void RemoveEvented(string a)
+    {
+        if(CanonEvents.ContainsKey(a)) CanonEvents.Remove(a);
+        UpdateAllNerds();
     }
     
     public void AddEvented(CanonEvent a)
@@ -332,7 +339,14 @@ public class Gamer : MonoBehaviour
 
     public void TruckPaper()
     {
-        if (HasEvented("PaperFoundReal")) DialogLol.Instance.StartDialog("TruckPaper");
+        if (HasEvented("PaperFoundReal") && !HasEvented("FullPaperExplain")) DialogLol.Instance.StartDialog("TruckPaper");
+    }
+    public void PaperCheck()
+    {
+        if (!HasEvented("PaperFoundReal")) 
+            DialogLol.Instance.SetVariable("Scene", "WagonExplainPaper");
+        else
+            DialogLol.Instance.SetVariable("Scene", "WagonNoExplainPaper");
     }
     public void HidePaper()
     {

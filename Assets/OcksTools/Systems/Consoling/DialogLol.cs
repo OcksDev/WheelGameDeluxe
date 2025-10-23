@@ -197,7 +197,6 @@ public class DialogLol : MonoBehaviour
                     {
                         e = e.Substring(e.Length-1,1);
                     }
-                    Console.Log($"{charl}, {fulltext.Length}");
                     if(charl < fulltext.Length)
                     {
                         if (e == " " || e.Contains("\n"))
@@ -502,13 +501,26 @@ public class DialogLol : MonoBehaviour
                 Gamer.Instance.AddEvented(new CanonEvent(data));
                 succeeded = true;
                 break;
+            case "RCanonEvent":
+                Gamer.Instance.RemoveEvented(data);
+                succeeded = true;
+                break;
             case "NonCanonEvent":
                 Gamer.Instance.AddEvented(new NonCanonEvent(data));
+                succeeded = true;
+                break;
+            case "RNonCanonEvent":
+                Gamer.Instance.RemoveEvented(data);
                 succeeded = true;
                 break;
             case "CharEvent":
                 list = new List<string>(data.Split(","));
                 Gamer.Instance.characterdict[list[0]].AddEvented(new NonCanonEvent(list[1]));
+                succeeded = true;
+                break;
+            case "RCharEvent":
+                list = new List<string>(data.Split(","));
+                Gamer.Instance.characterdict[list[0]].RemoveEvented(list[1]);
                 succeeded = true;
                 break;
             default:

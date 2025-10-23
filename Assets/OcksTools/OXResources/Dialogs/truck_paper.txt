@@ -3,7 +3,7 @@
 </> Noted. By the way, any idea what this paper means? I found it on the floor near where I woke up.
 </>
 </> <Name=Monster Truck Wheel>
-</> Oh those are pretty common. They have some basic information about the person who just got brought here.
+</> Oh those are pretty common. They have some basic information about the person who just got brought here, like their name, basic details, stuff like that.
 </> 
 </> <Name=MC>
 </> Mine wasn't like that.
@@ -14,6 +14,6 @@ Oh, that is strange. I must say, I have no idea what this is. I'd reccomend aski
 </> 
 </> <Name=MC>
 </> Can you give me directions to get there? I was already meaning to talk with them.
-</> <Scene=TruckDir>
+</> <CanonEvent=FullPaperExplain> <Scene=TruckDir>
 
 

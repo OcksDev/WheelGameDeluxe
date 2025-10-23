@@ -39,10 +39,10 @@
 </> Sawblade Wheel? How many people are trapped here?
 </> 
 </> <Name=Wagon Wheel>
-</> I think with you there's, um, 12? There are a few extras as well, but they don't matter.
+</> I think with you there's, um, 12 of us? There are a few extras as well, but they don't matter.
 </> 
 </> <Name=MC>
-</> You're calling people, extras?
+</> You're calling people "extras"?
 </> 
 </> <Name=Wagon Wheel>
 </> Well yeah, that's what they were designated as on their arrival paper.
