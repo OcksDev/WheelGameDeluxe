@@ -24,6 +24,8 @@ public class TriggerBox : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        var gm = collision.gameObject;
+        if (gm.tag != "Player") return;
         if (!RemoveInstead)
         {
             Gamer.Instance.AddEvented(new CanonEvent(Event));
