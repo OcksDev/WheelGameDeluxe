@@ -242,8 +242,10 @@ public class WagonWheel : Character
     }
 
 }
-public class PizzaWheeblic override void Init()
-    
+public class PizzaWheel : Character
+{
+    public override void Init() 
+    { 
         Name = "Pizza Wheel";
         WheelImage = Gamer.Instance.sprites[12];
     }
