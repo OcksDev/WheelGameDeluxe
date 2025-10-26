@@ -1,0 +1,11 @@
+-Test Dialog-
+</> <Name=Unicycle Wheel>
+</> Hey, Steering Wheel!
+</>
+</> <Name=MC>
+</> Yeah?
+</> 
+</> <Name=Unicycle Wheel>
+</> <Event=ShowPaper>Look what I found.
+</> <Event=UniHeyPaperCheck> <Scene=*Scene>
+

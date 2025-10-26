@@ -1,0 +1,5 @@
+-Test Dialog-
+</> <Name=MC>
+</> That paper.. Wagon Wheel mentioned it. Something about describing stuff about me?
+</> <Scene=UniHeyPaper_C> 
+

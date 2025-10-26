@@ -61,6 +61,9 @@ public class TimedObject : MonoBehaviour
                 case TimedAction.Times.AfterCharacterEvent:
                     if (CharacterLink.HasEvented(a.TargetEvent)) DoAction(a);
                     break;
+                case TimedAction.Times.CustomCondition:
+                    if (g.CustomConditions[a.TargetEvent]()) DoAction(a);
+                    break;
             }
         }
         if(CharacterLink != null && ie != null)
@@ -94,6 +97,7 @@ public class TimedAction : TimedActionBased
         AfterEvent,
         BeforeCharacterEvent,
         AfterCharacterEvent,
+        CustomCondition,
     }
 }
 [Serializable]

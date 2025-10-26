@@ -1,12 +1,15 @@
 -Test Dialog-
+</> <Name=Unicycle Wheel>
+</> Yeah, except I have no idea what yours means.
+</>
 </> <Name=MC>
-</> Hey, I found this strange paper on the floor. Any idea what it means?
+</> Strange..
 </> 
 </> <Name=Unicycle Wheel>
-</> Let me see...<br>Nope, no idea. Although, at this point, I'm not surpised.
+</> Yeah, everything about you is, honestly.
 </> 
 </> <Name=MC>
-</> What do you mean?
+</> How so?
 </> 
 </> <Name=Unicycle Wheel>
 </> Your double reincarnation, your strange paper, the way you act, I don't know, I just think theres something different about you.
@@ -15,7 +18,9 @@
 </> I mean, I don't think so. I seem pretty normal, coming from me.
 </> 
 </> <Name=Unicycle Wheel>
-</> I guess we will have to see.
+</> I guess we will have to see. <CanonEvent=PaperFoundReal><Event=HidePaper>I just moved the chair out in the hallway, maybe someone else will be able to understand it.
+</> 
+</> <Name=MC>
+</> I might have to try that.
 </> <CanonEvent=PaperExplained> <End>
-
 

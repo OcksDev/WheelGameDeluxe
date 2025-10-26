@@ -1,16 +1,28 @@
 -Test Dialog-
 </> <Name=MC>
-</> EXPLAIN THIS PAPER TO ME BITCh
+</> Is this the paper you were talking about?
 </> 
 </> <Name=Wagon Wheel>
-</> I try not to think about it.
+</> It is.. but it doesn't make sense. It's supposed to have information about you.
 </> 
 </> <Name=MC>
-</> Cool, well, I guess I'll leave you to your searching.
+</> But it doesn't.
 </> 
 </> <Name=Wagon Wheel>
-</> Tell me if you find the bear, alright? Sawblade Wheel said it was very important that I look for it.
+</> Yeah, that's the problem.
 </> 
 </> <Name=MC>
-</> Will do.
-</> <CanonEvent=WagonSpoken> <CanonEvent=FullPaperExplain> <End>
+</> So what do I do with it?
+</> 
+</> <Name=Wagon Wheel>
+</> I don't know, I've never really seen anything like this before.
+</> 
+</> <Name=MC>
+</> Cool.
+</> 
+</> <Name=Wagon Wheel>
+</> Yeah, cool. I'm going to go back to looking for this teddy bear now.
+</> 
+</> <Name=MC>
+</> I'll leave you to it then.
+</> <CanonEvent=WagonFP> <End>

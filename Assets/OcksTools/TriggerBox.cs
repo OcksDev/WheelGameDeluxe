@@ -3,6 +3,7 @@ using UnityEngine;
 public class TriggerBox : MonoBehaviour
 {
     public string Event;
+    public string ActionEvent;
     public bool RemoveInstead = false;
     private TimedObject bananas;
     void Awake()
@@ -33,6 +34,10 @@ public class TriggerBox : MonoBehaviour
         else
         {
             Gamer.Instance.RemoveEvented(Event);
+        }
+        if(ActionEvent != "")
+        {
+            GlobalEvent.Invoke(ActionEvent);
         }
     }
 

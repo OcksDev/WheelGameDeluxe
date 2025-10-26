@@ -188,7 +188,7 @@ public class MonsterTruckWheel : Character
     {
         var g = Gamer.Instance;
         string pp = "TruckIntro";
-
+        if (g.HasEvented("TruckTalk")) pp = "";
         return pp;
     }
     public override void SetInitalRelations()
@@ -211,21 +211,29 @@ public class WagonWheel : Character
     {
         var g = Gamer.Instance;
         string pp = "WagonIntro";
-        if (g.HasEvented("PaperFoundReal"))
+        if (g.HasEvented("WagonFP"))
         {
-            if (g.HasEvented("WagonSpoken") && g.HasEvented("WagonPaperMention"))
-            {
-                pp = "WagonFullPaper";
-            }else if (g.HasEvented("WagonSpoken"))
-            {
-                pp = "";
-            }
+            pp = "";
         }
         else
         {
-            if (g.HasEvented("WagonSpoken"))
+            if (g.HasEvented("PaperFoundReal"))
             {
-                pp = "WagonStillSearching";
+                if (g.HasEvented("WagonSpoken") && g.HasEvented("WagonPaperMention"))
+                {
+                    pp = "WagonFullPaper";
+                }
+                else if (g.HasEvented("WagonSpoken"))
+                {
+                    pp = "";
+                }
+            }
+            else
+            {
+                if (g.HasEvented("WagonSpoken"))
+                {
+                    pp = "WagonStillSearching";
+                }
             }
         }
 
@@ -234,11 +242,9 @@ public class WagonWheel : Character
     }
 
 }
-public class CatWheel : Character
-{
-    public override void Init()
-    {
-        Name = "Cat Wheel";
+public class PizzaWheeblic override void Init()
+    
+        Name = "Pizza Wheel";
         WheelImage = Gamer.Instance.sprites[12];
     }
 }

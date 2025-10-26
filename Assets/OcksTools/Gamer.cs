@@ -17,6 +17,9 @@ public class Gamer : MonoBehaviour
     public long GameTime = 0;
     public List<TimedObject> Nerds = new List<TimedObject>();
     public List<CharacterInteractionNerd> CharNerds = new List<CharacterInteractionNerd>();
+
+    public Dictionary<string,Func<bool>> CustomConditions = new Dictionary<string,Func<bool>>();
+
     private void Awake()
     {
         GlobalEvent.Append("StartingFreedom", StartingFreedom);
@@ -25,6 +28,12 @@ public class Gamer : MonoBehaviour
         GlobalEvent.Append("HidePaper", HidePaper);
         GlobalEvent.Append("TruckPaper", TruckPaper);
         GlobalEvent.Append("PaperCheck", PaperCheck);
+        GlobalEvent.Append("UniHeyPaperCheck", UniHeyPaperCheck);
+        GlobalEvent.Append("UniHeyPaperStart", UniHeyPaperStart);
+
+        CustomConditions.Add("UniWheelFindsPaper", () =>
+        (HasEvented("TruckTalk") || HasEvented("")) && !HasEvented("PaperFoundReal"));
+
 
 
         ConsoleLol.ConsoleCommandHook.Append(CreateWheelCommands);
@@ -34,7 +43,7 @@ public class Gamer : MonoBehaviour
         characters.Add(new UnicycleWheel());
         characters.Add(new MonsterTruckWheel());
         characters.Add(new BearingWheel());
-        characters.Add(new CatWheel());
+        characters.Add(new PizzaWheel());
         characters.Add(new GoldWheel());
         characters.Add(new RustyWheel());
         characters.Add(new CheeseWheel());
@@ -348,9 +357,21 @@ public class Gamer : MonoBehaviour
         else
             DialogLol.Instance.SetVariable("Scene", "WagonNoExplainPaper");
     }
+    public void UniHeyPaperCheck()
+    {
+        if (HasEvented("WagonPaperMention")) 
+            DialogLol.Instance.SetVariable("Scene", "UniHeyPaper_A"); //already knows
+        else
+            DialogLol.Instance.SetVariable("Scene", "UniHeyPaper_B"); //doesn't know
+    }
     public void HidePaper()
     {
         Gamer.Instance.StartCoroutine(HidePaper2());
+    }
+    
+    public void UniHeyPaperStart()
+    {
+        DialogLol.Instance.StartDialog("UniHeyPaper");
     }
 
     public IEnumerator ShowPaper2()

@@ -1,0 +1,11 @@
+-Test Dialog-
+</> <Name=MC>
+</> What's this?
+</> 
+</> <Name=Unicycle Wheel>
+</> It's your starting paper. It's supposed to have information on it like your name, basic details, stuff like that.
+</>
+</> <Name=MC>
+</> So it's supposed to describe me?
+</> <Scene=UniHeyPaper_C> 
+
