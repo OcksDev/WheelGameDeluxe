@@ -24,6 +24,7 @@ public class CameraLol : MonoBehaviour
     {
         if (Instance == null) instance = this;
     }
+
     private void FixedUpdate()
     {
         if (DisableCamera) return;
@@ -46,6 +47,8 @@ public class CameraLol : MonoBehaviour
 
     private void LateUpdate()
     {
+
+
         if (DisableCamera) return;
         /* some an example for what hurting a player could be like
         if (Input.GetKeyDown(KeyCode.N))
@@ -54,6 +57,7 @@ public class CameraLol : MonoBehaviour
             Shake(0.4f, 0.8f);
         }
         */
+        var tg = targetpos;
         transform.position = ppos;
         //handles getting the mouse position and making the camera adjust to move to it
         Vector3 p = Vector3.zero;
@@ -64,11 +68,17 @@ public class CameraLol : MonoBehaviour
             p /= 5;
             p *= MouseFollowStrength;
         }
+        var dd = MouseFollowSpeed;
+        if (DialogLol.Instance.dialogmode)
+        {
+            tg += Vector3.up * -1.5f;
+            dd *= 0.75f;
+        }
 
         // "pos" is the location the camera tries to get to
-        p += targetpos;
+        p += tg;
         p.z = -10;
-        var z = Vector3.MoveTowards(transform.position, p, Dist(p, transform.position) * 8 * Time.deltaTime * MouseFollowSpeed);
+        var z = Vector3.MoveTowards(transform.position, p, Dist(p, transform.position) * 8 * Time.deltaTime * dd);
 
         /* zz can be the max size the camera can go to, remove/change as needed
         float zz = 99999;

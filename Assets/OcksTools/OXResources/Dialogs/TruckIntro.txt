@@ -60,13 +60,13 @@
 </> I see.
 </> 
 </> <Name=Monster Truck Wheel>
-</> The reason is because Here in Wheel Civilization, there isn't a day/night cycle, and we don't sleep either. Still, coming from worlds where sleeping was a thing, we tend to follow similar patterns.
+</> The reason is because Here in Wheel Civilization, there isn't a day/night cycle, and we don't need to sleep either.
 </> 
 </> <Name=MC>
 </> Back up there, you know what sleeping is?
 </> 
 </> <Name=Monster Truck Wheel>
-</> Of course I do.
+</> Of course I do. We can sleep if we want, but we don't need to, so most of the time we don't.
 </> 
 </> <Name=MC>
 </> Do <i>you</i> know what food is?

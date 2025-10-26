@@ -32,7 +32,7 @@ public class Gamer : MonoBehaviour
         GlobalEvent.Append("UniHeyPaperStart", UniHeyPaperStart);
 
         CustomConditions.Add("UniWheelFindsPaper", () =>
-        (HasEvented("TruckTalk") || HasEvented("")) && !HasEvented("PaperFoundReal"));
+        (HasEvented("TruckTalk") || HasEvented("WagonSpoken")) && !HasEvented("PaperFoundReal"));
 
 
 

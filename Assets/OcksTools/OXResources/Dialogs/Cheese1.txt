@@ -1,0 +1,12 @@
+-Test Dialog-
+</> <Name=Unknown>
+</> Mrrr...
+</> 
+</> <Name=Unknown>
+</> Are you sleeping?
+</> 
+</> <Name=Unknown>
+</> Yeah... Come back.. later..
+</> <CanonEvent=Cheese1> <End>
+
+
