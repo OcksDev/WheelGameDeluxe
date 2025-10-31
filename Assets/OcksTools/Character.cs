@@ -128,6 +128,18 @@ public class CheeseWheel : Character
         Name = "Cheese Wheel";
         WheelImage = Gamer.Instance.sprites[3];
     }
+    public override string GetPreferredDialog()
+    {
+        var g = Gamer.Instance;
+        string pp = "";
+        if (!g.HasEvented("Cheese3"))
+        {
+            pp = "Cheese1";
+            if (g.HasEvented("Cheese1")) pp = "Cheese2";
+            if (g.HasEvented("Cheese2")) pp = "Cheese3";
+        }
+        return pp;
+    }
 }
 public class OfficeChairWheel : Character
 {

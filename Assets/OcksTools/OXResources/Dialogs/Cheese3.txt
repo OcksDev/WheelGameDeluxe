@@ -1,0 +1,87 @@
+-Test Dialog-
+</> <Name=Unknown>
+</> Mrrr, wha..?
+</> 
+</> <Name=MC>
+</> Hello there.
+</> 
+</> <Name=Unknown>
+</> Oh, wait, you're new, aren't you?
+</> 
+</> <Name=MC>
+</> Yeah, I just arrived a few minutes ago.
+</> 
+</> <Name=Unknown>
+</> Ah I see. So you are?
+</> 
+</> <Name=MC>
+</> Steering Wheel. You?
+</> 
+</> <Name=Unknown>
+</> I am <Name=Cheese Wheel>Cheese Wheel.
+</> 
+</> <Name=MC>
+</> Nice to meet you. I was wondering--two things really--why are you sleeping, and where did you get this bed from?
+</> 
+</> <Name=Cheese Wheel>
+</> Well, (yawns), I spend a lot of my time sleeping.
+</> 
+</> <Name=MC>
+</> Did you just say those parentheses out-loud?
+</> 
+</> <Name=Cheese Wheel>
+</> It's just so fun, you know?
+</> 
+</> <Name=MC>
+</> I guess? And the bed?
+</> 
+</> <Name=Cheese Wheel>
+</> I made it. I used some chair parts, which Unicycle Wheel was not happy about, and other random tidbits that I found lying around. 
+</> 
+</> <Name=MC>
+</> That's, actually really impressive. How did you get it looking so refined?
+</> 
+</> <Name=Cheese Wheel>
+</> Well I knew I would be spending a lot of my time on it, so I put a lot of effort into it. It was hard work with the limited supplies I had, but it paid off.
+</> 
+</> <Name=MC>
+</> That's really cool.
+</> 
+</> <Name=Cheese Wheel>
+</> Well, thank you, I guess this praise makes up for your not so kind awakening methods.
+</> 
+</> <Name=MC>
+</> Sorry about that, I was just really curious. I am still quite new, and just about getting my ropes.
+</> 
+</> <Name=Cheese Wheel>
+</> Hey, no harm no foul. What are you up to right now, anyway?
+</> 
+</> <Name=MC>
+</> I'm moistly just looking around the place, trying to get a feel for it. 
+</> 
+</> <Name=Cheese Wheel>
+</> I was like that too when I first arrived, you'll find your niche.
+</> 
+</> <Name=MC>
+</> Thank you, I guess?
+</> 
+</> <Name=Cheese Wheel>
+</> Don't mention it, but if you don't mind, I'm going to back to sleep.
+</> 
+</> <Name=MC>
+</> Alright, well, see you around.
+</> 
+</> <Name=Cheese Wheel>
+</> Mrrr... see ya... around.
+</> 
+</> <Name=MC>
+</> ...<br>Did they just fall asleep?
+</> 
+</> <Name=Cheese Wheel>
+</> ...
+</> 
+</> <Name=MC>
+</> Cool...
+</> <CanonEvent=Cheese3> <End>
+
+
