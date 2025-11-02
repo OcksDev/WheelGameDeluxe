@@ -135,8 +135,14 @@ public class Gamer : MonoBehaviour
         AddEvented(new NonCanonEvent("RealStarted"));
         StartCoroutine(LoadIntoGame());
     }
+    public void LoadGameClick()
+    {
+        if (HasEvented("RealStarted")) return;
+        AddEvented(new NonCanonEvent("RealStarted"));
+        StartCoroutine(LoadIntoGame(true));
+    }
 
-    public IEnumerator LoadIntoGame()
+    public IEnumerator LoadIntoGame(bool loadingnotnew = false)
     {
         var d = Tags.refs["Fader"].GetComponent<Image>();
         var dd = Color.black;
@@ -149,7 +155,15 @@ public class Gamer : MonoBehaviour
             d.color = e;
         }
         ));
-        StartNewGame();
+        if (!loadingnotnew)
+        {
+            StartNewGame(false);
+        }
+        else
+        {
+            StartNewGame(true);
+
+        }
 
         yield return StartCoroutine(OXLerp.Linear((x) =>
         {
@@ -175,20 +189,29 @@ public class Gamer : MonoBehaviour
 
 
     public static bool DisablePlayerCamera = false;
-    public void StartNewGame()
+    public void StartNewGame(bool loading)
     {
         CloseAllMenus();
+        Vector3 startpos = Vector3.zero;
+        int starttime = 0;
+        if (loading)
+        {
+            //load data from savefile
+            throw new NotImplementedException();
+        }
 
         SpawnSystem.Spawn(new SpawnData("Player")
-            .Position(Vector3.zero)
+            .Position(startpos)
             .ParentFromRef("ObjectHolder")
             );
-
-        InputManager.AddLockLevel("Dialog");
-        SetGameTime(0);
-        DisablePlayerCamera = true;
-        CameraLol.DisableCamera = true;
-        Camera.main.orthographicSize = 2;
+        if (!HasEvented("StartingFreedom"))
+        {
+            InputManager.AddLockLevel("Dialog");
+            DisablePlayerCamera = true;
+            CameraLol.DisableCamera = true;
+            Camera.main.orthographicSize = 2;
+        }
+        SetGameTime(starttime);
 
     }
 

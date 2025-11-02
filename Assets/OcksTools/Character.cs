@@ -284,6 +284,11 @@ public class CanonEvent
         Name = a;
     }
 
+    public override string ToString()
+    {
+        return Name;
+    }
+
 }
 public class NonCanonEvent : CanonEvent
 {
