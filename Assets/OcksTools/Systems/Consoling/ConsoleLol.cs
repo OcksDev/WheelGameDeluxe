@@ -227,6 +227,7 @@ public class ConsoleLol : MonoBehaviour
         Add(new OXCommand("howmanywouldyoutake").Action(() => { Console.Log("49 Bullets!"); }));
         Add(new OXCommand("event").Action((x) => Gamer.Instance.AddEvented(new CanonEvent( x.com_caps[1]))));
         Add(new OXCommand("revent").Action((x) => Gamer.Instance.RemoveEvented(x.com_caps[1])));
+        Add(new OXCommand("clip").Action((x) => PlayerController.Instance.ToggleClip()));
     }
     private static OXCommandData raa;
 

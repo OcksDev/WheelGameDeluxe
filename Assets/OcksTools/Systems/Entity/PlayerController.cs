@@ -17,6 +17,13 @@ public class PlayerController : MonoBehaviour
     {
         rigid= GetComponent<Rigidbody2D>();
     }
+
+    public void ToggleClip()
+    {
+        var dd = GetComponent<BoxCollider2D>();
+        dd.enabled = !dd.enabled;
+    }
+
     void FixedUpdate()
     {
         move *= decay;
