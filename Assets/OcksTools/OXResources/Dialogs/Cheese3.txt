@@ -27,7 +27,7 @@
 </> Well, (yawns), I spend a lot of my time sleeping.
 </> 
 </> <Name=MC>
-</> Did you just say those parentheses out-loud?
+</> Did you just say those parentheses out loud?
 </> 
 </> <Name=Cheese Wheel>
 </> It's just so fun, you know?
@@ -51,13 +51,13 @@
 </> Well, thank you, I guess this praise makes up for your not so kind awakening methods.
 </> 
 </> <Name=MC>
-</> Sorry about that, I was just really curious. I am still quite new, and just about getting my ropes.
+</> Sorry about that, I was just really curious. I am still quite new, and still adjusting to life here.
 </> 
 </> <Name=Cheese Wheel>
 </> Hey, no harm no foul. What are you up to right now, anyway?
 </> 
 </> <Name=MC>
-</> I'm moistly just looking around the place, trying to get a feel for it. 
+</> I'm mostly just looking around the place, trying to get a feel for it. 
 </> 
 </> <Name=Cheese Wheel>
 </> I was like that too when I first arrived, you'll find your niche.
@@ -66,7 +66,7 @@
 </> Thank you, I guess?
 </> 
 </> <Name=Cheese Wheel>
-</> Don't mention it, but if you don't mind, I'm going to back to sleep.
+</> Don't mention it, but if you don't mind, I'm going to go back to sleep.
 </> 
 </> <Name=MC>
 </> Alright, well, see you around.
