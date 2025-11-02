@@ -1,15 +1,15 @@
 -Test Dialog-
 </> <Name=Monster Truck Wheel>
-</> Oh yeah, no problem, if you go through the library, (insert directions)
+</> Oh yeah, it's kind of hard to explain myself, but, if you go to the library, Bearing Wheel can direct you.
 </> 
 </> <Name=MC>
-</> I guess I'll try to make my way there, but who designed this school? Why do I have to go through a library and (insert later) in order to get to a lab?
+</> I guess I'll try to make my way there, but why do I need to ask someone else for directions, do you not know the way?
 </> 
 </> <Name=Monster Truck Wheel>
-</> Don't ask me, I have no idea either.
+</> I do, but explaining it to a newbie is kind of hard, you need to be there for yourself.
 </> 
 </> <Name=MC>
-</> Well, anyway, thanks for the directions, I'll be going now.
+</> Well, anyway, thanks for the help, I'll be going now.
 </> 
 </> <Name=Monster Truck Wheel>
 </> See ya.

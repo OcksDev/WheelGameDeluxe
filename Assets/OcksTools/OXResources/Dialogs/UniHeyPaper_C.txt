@@ -18,7 +18,7 @@
 </> I mean, I don't think so. I seem pretty normal, coming from me.
 </> 
 </> <Name=Unicycle Wheel>
-</> I guess we will have to see. <CanonEvent=PaperFoundReal><Event=HidePaper>I just moved the chair out in the hallway, maybe someone else will be able to understand it.
+</> I guess we will have to see. <CanonEvent=PaperFoundReal><CanonEvent=FuckChairs><Event=HidePaper>I just moved the chair out in the hallway, maybe someone else will be able to understand it.
 </> 
 </> <Name=MC>
 </> I might have to try that.

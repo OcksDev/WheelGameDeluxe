@@ -51,6 +51,7 @@ public class TimedObject : MonoBehaviour
                     break;
                 case TimedAction.Times.BeforeEvent:
                     if (!g.HasEvented(a.TargetEvent)) DoAction(a);
+                    if (!g.HasEvented(a.TargetEvent) && a.TargetEvent == "PaperFoundReal") Console.Log($"{gameObject}: {g.HasEvented(a.TargetEvent)}");
                     break;
                 case TimedAction.Times.AfterEvent:
                     if (g.HasEvented(a.TargetEvent)) DoAction(a);
