@@ -109,7 +109,7 @@ public class InputManager : MonoBehaviour
 
     public static bool GetSelected(List<string> ide)
     {
-        return locklevel.Count==0 || ide.Count == 0 || ide[0] == "" || RandomFunctions.AllItemsFromListInList(ide, locklevel);
+        return locklevel.Count==0 || ide.Count == 0 || ide[0] == "" || OXFunctions.AllItemsFromListInList(ide, locklevel);
     }
 
     public static void ResetLockLevel()

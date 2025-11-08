@@ -63,7 +63,7 @@ public class OXFile
             foreach(byte b in oxconfirm) { bytes.Add(b); }
             var ver = BitConverter.GetBytes(ParserVersion);
             foreach(byte b in ver) { bytes.Add(b); }
-            wank = RandomFunctions.CombineLists(bytes, wank);
+            wank = OXFunctions.CombineLists(bytes, wank);
             File.WriteAllBytes(FileName, wank.ToArray());
         }
 

@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Text.RegularExpressions;
-using Unity.Mathematics;
 
 
 //using Unity.Netcode;
@@ -53,17 +52,7 @@ public class RandomFunctions : MonoBehaviour
         return f;
     }
 
-    public static Vector2 GetActualSizeOfUI(RectTransform re) 
-    {
-        //sizeDelta and Rect.width both dont get the actual size, somehow
-        return (re.rect.max - re.rect.min);
-    }
-
-    public static Vector3 ReflectVector(Vector3 incoming, Vector3 normal)
-    {
-        return incoming - 2 * Vector3.Dot(incoming, normal) * normal;
-    }
-    public static Dictionary<string,string> GenerateBlankHiddenData()
+    public static Dictionary<string, string> GenerateBlankHiddenData()
     {
         return new Dictionary<string, string>()
         {
@@ -91,7 +80,7 @@ public class RandomFunctions : MonoBehaviour
         // should work the same as SpreadCalc(), except that it expands up to a point first
         buffer = Math.Clamp(buffer, 2, 1000000);
         float f = (total_arc * (buffer - 1));
-        if(max > 1) f /= (max - 1);
+        if (max > 1) f /= (max - 1);
         float spread = f;
         SpreadCalc(index, max, spread, fix);
     }
@@ -99,7 +88,7 @@ public class RandomFunctions : MonoBehaviour
     public static string CharPrepend(string input, int length, char nerd = '0')
     {
         var e = length - input.Length;
-        if(e <= 0)
+        if (e <= 0)
         {
             return input;
         }
@@ -113,89 +102,6 @@ public class RandomFunctions : MonoBehaviour
     {
         return cam.ScreenToWorldPoint(Input.mousePosition);
     }
-    public static List<T> RemoveDuplicates<T>(List<T> tee)
-    {
-        var tea = new List<T>();
-        foreach (T t in tee)
-        {
-            if (!tea.Contains(t)) tea.Add(t);
-        }
-        return tea;
-    }
-
-    public static Dictionary<T,T2> MergeDictionary<T,T2>(Dictionary<T,T2> ti, Dictionary<T,T2> tee)
-    {
-        var tea = new Dictionary<T, T2>(ti);
-        foreach (var t in tee)
-        {
-            if (tea.ContainsKey(t.Key))
-            {
-                tea[t.Key] = t.Value;
-            }
-            else
-            {
-                tea.Add(t.Key, t.Value);
-            }
-        }
-        return tea;
-    }
-    
-
-
-    public static List<T> CombineLists<T>(List<T> ti, List<T> tee)
-    {
-        var tea = new List<T>(ti);
-        foreach (T t in tee)
-        {
-            tea.Add(t);
-        }
-        return tea;
-    }
-    public static bool ListContainsItemFromList<T>(List<T> ti, List<T> tee)
-    {
-        foreach (T t in ti)
-        {
-            if (tee.Contains(t)) return true;
-        }
-        return false;
-    }
-    public static bool AllItemsFromListInList<T>(List<T> ti, List<T> tee)
-    {
-        foreach (T t in ti)
-        {
-            if (!tee.Contains(t)) return false;
-        }
-        return true;
-    }
-    public static bool ListMatchesList<T>(List<T> ti, List<T> tee)
-    {
-        if (ti.Count != tee.Count) return false;
-        for (int t = 0; t < ti.Count; t++)
-        {
-            if (!ti[t].Equals(tee[t]))
-            {
-                return false;
-            }
-        }
-        return true;
-    }
-    public static bool ListMatchesListOrderless<T>(List<T> ti, List<T> tee)
-    {
-        if (ti.Count != tee.Count) return false;
-        var tea = new List<T>(ti);
-        var teatea = new List<T>(tee);
-        for (int t = 0; t < tea.Count;)
-        {
-            if (!teatea.Contains(tea[0])) return false;
-            else
-            {
-                teatea.Remove(tea[0]);
-                tea.RemoveAt(0);
-            }
-        }
-        return true;
-    }
-
     public static void OpenURLInBrowser(string url)
     {
         var info = new ProcessStartInfo(url);
@@ -226,21 +132,21 @@ public class RandomFunctions : MonoBehaviour
     public static float EaseInAndOut(float perc, float pow = 3)
     {
         //using values like 0.4 make it go fast at the start, slow down in the middle, then speed up again at the end
-        if(perc <= 0.5f)
+        if (perc <= 0.5f)
         {
-            return Mathf.Pow(2*perc, pow)/2;
+            return Mathf.Pow(2 * perc, pow) / 2;
         }
         else
         {
-            return (2-Mathf.Pow(2 * (1-perc), pow)) / 2;
+            return (2 - Mathf.Pow(2 * (1 - perc), pow)) / 2;
         }
     }
     public static float EaseBounce(float perc, int bounces = 4, float pow = 5)
     {
-        var a = perc * (bounces+0.5f);
+        var a = perc * (bounces + 0.5f);
         var x = Mathf.Abs(Mathf.Cos(Mathf.PI * a));
         x /= Mathf.Pow(pow + 1, Mathf.Floor(a + 0.5f));
-        return 1-x;
+        return 1 - x;
     }
     public static float EaseOvershoot(float perc, float quantity = 4, float pow = 1)
     {
@@ -248,7 +154,7 @@ public class RandomFunctions : MonoBehaviour
         var x = Mathf.Cos(Mathf.PI * perc * quantity);
         x *= 1 - perc;
         x /= (pow * perc) + 1;
-        return 1-x;
+        return 1 - x;
     }
 
     public static CompareState CompareTwoVersions(string I_Am, string compared_to)
@@ -256,11 +162,11 @@ public class RandomFunctions : MonoBehaviour
         //supports things in the format of v#.#.# or #.#.#
         // There can be any amount of #s, so "v1.2" is valid, so is "1.2.3.4.5",
 
-        if(I_Am.Length < 1) return CompareState.Invalid;
-        if(compared_to.Length < 1) return CompareState.Invalid;
-        if (I_Am.ToLower()[0]=='v') I_Am = I_Am.Substring(1);
-        if (compared_to.ToLower()[0]=='v') compared_to = compared_to.Substring(1);
-        List<string> p = Converter.StringToList(I_Am,".");
+        if (I_Am.Length < 1) return CompareState.Invalid;
+        if (compared_to.Length < 1) return CompareState.Invalid;
+        if (I_Am.ToLower()[0] == 'v') I_Am = I_Am.Substring(1);
+        if (compared_to.ToLower()[0] == 'v') compared_to = compared_to.Substring(1);
+        List<string> p = Converter.StringToList(I_Am, ".");
         List<string> p2 = Converter.StringToList(compared_to, ".");
         int amnt = System.Math.Max(p.Count, p2.Count);
         for (int i = 0; i < amnt; i++)
@@ -286,11 +192,11 @@ public class RandomFunctions : MonoBehaviour
                     var b2 = Regex.Match(p2[i], "^[0-9]+");
                     var a3 = Regex.Match(p[i], "[a-zA-Z]+$");
                     var b3 = Regex.Match(p2[i], "[a-zA-Z]+$");
-                    if(a.Success || b.Success)
+                    if (a.Success || b.Success)
                     {
                         //return CompareState.Greater;
                         if (!a2.Success) return CompareState.Lesser;
-                        if(!b2.Success) return CompareState.Greater;
+                        if (!b2.Success) return CompareState.Greater;
 
                         if (int.Parse(a2.Value) < int.Parse(b2.Value))
                         {
@@ -309,7 +215,7 @@ public class RandomFunctions : MonoBehaviour
                             x *= 10;
                         }
                         x = 1;
-                        for(int j = 0; j < b3.Length; j++)
+                        for (int j = 0; j < b3.Length; j++)
                         {
                             t2 += b3.Value[j] * x;
                             x *= 10;
@@ -397,14 +303,6 @@ public class RandomFunctions : MonoBehaviour
         var z = p2.z - p1.z;
         return (x * x) + (y * y) + (z * z);
     }
-    public static int Mod(int r, int max)
-    {
-        return ((r % max) + max) % max;
-    }
-    public static float Mod(float r, float max)
-    {
-        return ((r % max) + max) % max;
-    }
     public static Quaternion PointAtPoint(Vector3 start_location, Vector3 location)
     {
         Quaternion _lookRotation =
@@ -443,4 +341,125 @@ public class RandomFunctions : MonoBehaviour
 
 
 
+}
+
+public static class OXFunctions
+{
+    public static int Mod(this int r, int max)
+    {
+        return ((r % max) + max) % max;
+    }
+    public static float Mod(this float r, float max)
+    {
+        return ((r % max) + max) % max;
+    }
+    public static double Mod(this double r, double max)
+    {
+        return ((r % max) + max) % max;
+    }
+    public static long Mod(this long r, long max)
+    {
+        return ((r % max) + max) % max;
+    }
+    public static List<T> RemoveDuplicates<T>(this List<T> tee)
+    {
+        var tea = new List<T>();
+        foreach (T t in tee)
+        {
+            if (!tea.Contains(t)) tea.Add(t);
+        }
+        return tea;
+    }
+    public static double Remap(this double value, double original_min, double original_max, double new_min, double new_max)
+    {
+        return (value - original_min) / (original_max - original_min) * (new_max - new_min) + new_min;
+    }
+    public static float Remap(this float value, float original_min, float original_max, float new_min, float new_max)
+    {
+        return (value - original_min) / (original_max - original_min) * (new_max - new_min) + new_min;
+    }
+
+    public static Dictionary<T, T2> MergeDictionary<T, T2>(this Dictionary<T, T2> ti, Dictionary<T, T2> tee)
+    {
+        var tea = new Dictionary<T, T2>(ti);
+        foreach (var t in tee)
+        {
+            if (tea.ContainsKey(t.Key))
+            {
+                tea[t.Key] = t.Value;
+            }
+            else
+            {
+                tea.Add(t.Key, t.Value);
+            }
+        }
+        return tea;
+    }
+
+
+
+    public static List<T> CombineLists<T>(this List<T> ti, List<T> tee)
+    {
+        var tea = new List<T>(ti);
+        foreach (T t in tee)
+        {
+            tea.Add(t);
+        }
+        return tea;
+    }
+    public static bool ListContainsItemFromList<T>(this List<T> ti, List<T> tee)
+    {
+        foreach (T t in ti)
+        {
+            if (tee.Contains(t)) return true;
+        }
+        return false;
+    }
+    public static bool AllItemsFromListInList<T>(this List<T> ti, List<T> tee)
+    {
+        foreach (T t in ti)
+        {
+            if (!tee.Contains(t)) return false;
+        }
+        return true;
+    }
+    public static bool ListMatchesList<T>(this List<T> ti, List<T> tee)
+    {
+        if (ti.Count != tee.Count) return false;
+        for (int t = 0; t < ti.Count; t++)
+        {
+            if (!ti[t].Equals(tee[t]))
+            {
+                return false;
+            }
+        }
+        return true;
+    }
+    public static bool ListMatchesListOrderless<T>(this List<T> ti, List<T> tee)
+    {
+        if (ti.Count != tee.Count) return false;
+        var tea = new List<T>(ti);
+        var teatea = new List<T>(tee);
+        for (int t = 0; t < tea.Count;)
+        {
+            if (!teatea.Contains(tea[0])) return false;
+            else
+            {
+                teatea.Remove(tea[0]);
+                tea.RemoveAt(0);
+            }
+        }
+        return true;
+    }
+
+    public static Vector2 GetActualSizeOfUI(this RectTransform re)
+    {
+        //sizeDelta and Rect.width both dont get the actual size, somehow
+        return (re.rect.max - re.rect.min);
+    }
+
+    public static Vector3 ReflectVector(this Vector3 incoming, Vector3 normal)
+    {
+        return incoming - 2 * Vector3.Dot(incoming, normal) * normal;
+    }
 }

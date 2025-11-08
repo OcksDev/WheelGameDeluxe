@@ -210,7 +210,7 @@ public class GISItem
         Data["Index"] = Name.ToString();
         Data["Count"] = Amount.ToString();
 
-        Dictionary<string, string> bb = RandomFunctions.MergeDictionary(def, Data);
+        Dictionary<string, string> bb = OXFunctions.MergeDictionary(def, Data);
 
         if (bb["Index"]=="Empty") bb = new Dictionary<string, string>(); //no need to store this, saves a large amount of space
         if (bb.ContainsKey("Count") && bb["Count"] == "1") bb.Remove("Count"); //no need to store this, saves a minimal amount of space
@@ -221,7 +221,7 @@ public class GISItem
     {
         setdefaultvals();
 
-        Data = RandomFunctions.MergeDictionary(Data, Converter.EscapedStringToDictionary(e, "~|~", "~o~"));
+        Data = OXFunctions.MergeDictionary(Data, Converter.EscapedStringToDictionary(e, "~|~", "~o~"));
 
         Name = Data["Index"];
         Amount = int.Parse(Data["Count"]);
