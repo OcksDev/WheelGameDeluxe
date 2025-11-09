@@ -29,7 +29,11 @@ public class Gamer : MonoBehaviour
         GlobalEvent.Append("TruckPaper", TruckPaper);
         GlobalEvent.Append("PaperCheck", PaperCheck);
         GlobalEvent.Append("UniHeyPaperCheck", UniHeyPaperCheck);
+        GlobalEvent.Append("StrangeMetCheeseCheck", StrangeMetCheeseCheck);
         GlobalEvent.Append("UniHeyPaperStart", UniHeyPaperStart);
+        GlobalEvent.Append("StrangeWorld", StrangeWorld);
+        GlobalEvent.Append("RustyEnter", RustyEnter);
+        GlobalEvent.Append("RustyExit", RustyExit);
 
         CustomConditions.Add("UniWheelFindsPaper", () =>
         (HasEvented("TruckTalk") || HasEvented("WagonSpoken")) && !HasEvented("PaperFoundReal"));
@@ -387,9 +391,29 @@ public class Gamer : MonoBehaviour
         else
             DialogLol.Instance.SetVariable("Scene", "UniHeyPaper_B"); //doesn't know
     }
+    public void StrangeMetCheeseCheck()
+    {
+        if (HasEvented("Cheese3")) 
+            DialogLol.Instance.SetVariable("Scene", "StrangeWorld_A");
+        else
+            DialogLol.Instance.SetVariable("Scene", "StrangeWorld_B");
+    }
+    public void StrangeWorld()
+    {
+        DialogLol.Instance.StartDialog("StrangeWorld");
+    }
     public void HidePaper()
     {
         Gamer.Instance.StartCoroutine(HidePaper2());
+    }
+
+    public void RustyEnter()
+    {
+        Gamer.Instance.StartCoroutine(RustyEnter2());
+    }
+    public void RustyExit()
+    {
+        Gamer.Instance.StartCoroutine(RustyExit2());
     }
     
     public void UniHeyPaperStart()
@@ -412,6 +436,22 @@ public class Gamer : MonoBehaviour
         {
             var dd = RandomFunctions.EaseOut(x);
             Tags.refs["Paper"].transform.position = Vector3.Lerp(Tags.refs["Pos1"].transform.position, Tags.refs["Pos2"].transform.position, dd);
+        }, 0.75f);
+    }
+    public IEnumerator RustyEnter2()
+    {
+        yield return OXLerp.Linear((x) =>
+        {
+            var dd = RandomFunctions.EaseIn(x);
+            Tags.refs["Rusty Wheel"].transform.position = Vector3.Lerp(new Vector3(-2.34078026f, -30f, 0), new Vector3(-5.77f, -30f, 0), dd);
+        }, 0.75f);
+    }
+    public IEnumerator RustyExit2()
+    {
+        yield return OXLerp.Linear((x) =>
+        {
+            var dd = 1f-RandomFunctions.EaseOut(x);
+            Tags.refs["Rusty Wheel"].transform.position = Vector3.Lerp(new Vector3(-2.34078026f, -30f, 0), new Vector3(-5.77f, -30f, 0), dd);
         }, 0.75f);
     }
 

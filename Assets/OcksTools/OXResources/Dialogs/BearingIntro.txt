@@ -1,12 +1,45 @@
 -Test Dialog-
+</> <Name=MC>
+</> Hello there
+</> 
 </> <Name=Unknown>
-</> Mrrr...
+</> Oh, your um, new, I suppose.
 </> 
 </> <Name=MC>
-</> Are you sleeping?
+</> Yeah, I'm Steering Wheel, you?
 </> 
 </> <Name=Unknown>
-</> Yeah... Come back.. later..
-</> <CanonEvent=Cheese1> <End>
+</> I'm um, B-<Name=Bearing Wheel>Bearing Wheel.
+</> 
+</> <Name=MC>
+</> Oh cool, Monster Truck Wheel said you could give me the directions to the lab, where Pizza Wheel is.
+</> 
+</> <Name=Bearing Wheel>
+</> I-I can, if you go back the way you came, you can follow the corridor down, (extend)
+</> 
+</> <Name=MC>
+</> Back the way I came? But it's a straight path between here and the gym.
+</> 
+</> <Name=Bearing Wheel>
+</> N-Not from here it's not.
+</> 
+</> <Name=MC>
+</> What?
+</> 
+</> <Name=Bearing Wheel>
+</> J-Just, um, go there yourself.
+</> 
+</> <Name=MC>
+</> I guess I will? This place is so strange...
+</> 
+</> <Name=Bearing Wheel>
+</> You g-get used to it.
+</> 
+</> <Name=MC>
+</> So I've been told. See you around, I guess.
+</> 
+</> <Name=Bearing Wheel>
+</> ...
+</> <CanonEvent=BearingSpeak>
 
 

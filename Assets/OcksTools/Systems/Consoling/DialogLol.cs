@@ -12,6 +12,7 @@ public class DialogLol : MonoBehaviour
     public Dictionary<string, OXLanguageFileIndex> LanguageFileIndexes = new Dictionary<string, OXLanguageFileIndex>();
     public bool UseLanguageFileSystem = false;
     public static string BadGex = @"[\^*!&,]";
+    public Color NamedCharacterColor;
     public GameObject DialogBoxObject;
     private DialogBoxL pp;
     public List<DialogHolder> DialogFiles = new List<DialogHolder>();
@@ -60,7 +61,7 @@ public class DialogLol : MonoBehaviour
     public string PlaySoundOnType = "";
     private List<string> str = new List<string>();
     private string ActiveFileName = "";
-    private string baldcharacters = " \n\t";
+    private string baldcharacters = " \n\t\r<>";
     private Dictionary<string, string> variables = new Dictionary<string, string>();
     private Dictionary<string, DialogSettings> name_to_setting = new Dictionary<string, DialogSettings>();
 
@@ -278,6 +279,26 @@ public class DialogLol : MonoBehaviour
         {
             case "A":
                 SoundSystem.Instance.PlaySound(new OXSound("A", 0.2f).Pitch(0.5f).Clipping());
+                break;
+            case "Default":
+                switch (speaker)
+                {
+                    case "Steering Wheel":
+                        SoundSystem.Instance.PlaySound(new OXSound("Smeg", 0.2f).Pitch(0.5f).Clipping());
+                        break;
+                    case "Gear Wheel":
+                        SoundSystem.Instance.PlaySound(new OXSound("Smeg", 0.2f).Pitch(0.42f).Clipping());
+                        break;
+                    case "Rusty Wheel":
+                        SoundSystem.Instance.PlaySound(new OXSound("Smeg", 0.2f).Pitch(1f).Clipping());
+                        break;
+                    case "Unknown":
+                        SoundSystem.Instance.PlaySound(new OXSound("Smeg", 0.2f).Pitch(0.25f).Clipping());
+                        break;
+                    default:
+                        SoundSystem.Instance.PlaySound(new OXSound("Smeg", 0.2f).Pitch(0.75f).Clipping());
+                        break;
+                }
                 break;
             default:
                 Debug.LogWarning("Failed to find a sound preset with the index of " + index);
@@ -874,7 +895,6 @@ public class DialogLol : MonoBehaviour
         if (CurrentSettings == null) CurrentSettings = new DialogSettings(TrueDefaults);
         ParseFromSettings(CurrentSettings);
         EndBanna();
-        PlaySoundOnType = "";
         if (pp != null)
         {
             int i = 0;
@@ -957,16 +977,37 @@ public class DialogLol : MonoBehaviour
     public List<string> GetFormattedFromFile(string filename, string datat = "Dialog")
     {
         List<string> str = null;
+        string ppsex = "";
+
+
         if (GetUseLFS())
         {
-            str =
-        new List<string>(LanguageFileSystem.Instance.GetString(LanguageFileIndexes[filename], "").Split("</>"));
+            ppsex = LanguageFileSystem.Instance.GetString(LanguageFileIndexes[filename], "");
         }
         else
         {
+            ppsex = LanguageFileIndexes[filename].GetDefaultData();
+        }
+
+        var smegglesnin = Regex.Matches(ppsex, @"@<.*?>").ToList().AListToBList((x) => x.Value).RemoveDuplicates();
+        for (int i = 0; i < smegglesnin.Count; i++)
+        {
+            var dingsing = smegglesnin[i];
+            var gar = dingsing.Substring(2);
+            gar = gar.Substring(0, gar.Length - 1);
+            var single = variables[gar];
+            ppsex = Regex.Replace(ppsex, Regex.Escape(dingsing), single);
+        }
+
+        foreach (var d in Gamer.Instance.characters)
+        {
+            string aa = d.Name;
+            if (aa == "MC") aa = "Steering Wheel";
+            ppsex = Regex.Replace(ppsex, $"(?<!=)({aa})", $"<color=#{NamedCharacterColor.ColorToString()}>{aa}</color>");
             str = new List<string>(LanguageFileIndexes[filename].GetDefaultData().Split("</>"));
         }
 
+        str = new List<string>(ppsex.Split("</>"));
         string d1 = str[0];
         ActiveFileName = d1.Split(Environment.NewLine)[0];
         if (datat != "Choose") str.RemoveAt(0);

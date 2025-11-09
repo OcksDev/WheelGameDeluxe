@@ -156,6 +156,16 @@ public class BearingWheel : Character
         Name = "Bearing Wheel";
         WheelImage = Gamer.Instance.sprites[4];
     }
+    public override string GetPreferredDialog()
+    {
+        var g = Gamer.Instance;
+        string pp = "";
+        if (!g.HasEvented("BearingSpeak"))
+        {
+            pp = "BearingIntro";
+        }
+        return pp;
+    }
 }
 public class GoldWheel : Character
 {

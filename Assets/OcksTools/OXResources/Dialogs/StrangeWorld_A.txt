@@ -1,0 +1,10 @@
+-Test Dialog-
+</> <Name=MC>
+</> Isn't Cheese Wheel asleep?
+</>
+</> <Name=Rusty Wheel>
+</> Not after I jumped on top of them and woke them up.
+</>
+</> <Name=MC>
+</> Yeah, that would do it.
+</> <Scene=StrangeWorld_C>

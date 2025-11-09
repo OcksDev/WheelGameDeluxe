@@ -1,0 +1,10 @@
+-Test Dialog-
+</> <Name=MC>
+</> Cheese Wheel?
+</>
+</> <Name=Rusty Wheel>
+</> You might have missed them. They spend most of their time sleeping, so it's not a surpise.
+</>
+</> <Name=MC>
+</> Yeah, that would make sense.
+</> <Scene=StrangeWorld_C>

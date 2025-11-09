@@ -1,0 +1,25 @@
+-Test Dialog-
+</> <Name=Rusty Wheel>
+</> But what brings you around here? Just exploring the place?
+</>
+</> <Name=MC>
+</> Somewhat, I am also looking for Pizza Wheel. I have so many questions, and they seem like one who can best clear them up.
+</> 
+</> <Name=Rusty Wheel>
+</> Oh yeah, that would be my go to as well. They spend so much time in the lab I sometimes forget they exist.
+</>
+</> <Name=MC>
+</> Reclusive?
+</> 
+</> <Name=Rusty Wheel>
+</> You could say. I once counted how long it took them to leave the lab one time, I think I lost track after 69 hours?
+</>
+</> <Name=MC>
+</> Damn. Well, I guess that re-confirms where they'll be.
+</> 
+</> <Name=Rusty Wheel>
+</> Yeah, I'd be shocked if they were anywhere else, frankly. Anyway, <Event=RustyExit>I'ma bounce. 
+</>
+</> <Name=MC>
+</> ...What a strange wheel.
+</> <End>
