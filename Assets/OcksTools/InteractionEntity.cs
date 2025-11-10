@@ -25,7 +25,7 @@ public class InteractionEntity : MonoBehaviour
     {
         if(PlayerController.Instance == null) return;
         var xx = RandomFunctions.DistNoSQRT(transform.position, PlayerController.Instance.transform.position);
-        bool goodcheeks = AllowInteract;
+        bool goodcheeks = AllowInteract && !DialogLol.Instance.dialogmode;
         if(xx <= InterDistSQ && !was && goodcheeks)
         {
             Displaytext.gameObject.SetActive(true);

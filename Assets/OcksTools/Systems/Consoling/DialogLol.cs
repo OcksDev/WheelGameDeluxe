@@ -281,22 +281,23 @@ public class DialogLol : MonoBehaviour
                 SoundSystem.Instance.PlaySound(new OXSound("A", 0.2f).Pitch(0.5f).Clipping());
                 break;
             case "Default":
+                float dialog_lkoudness = 0.1f;
                 switch (speaker)
                 {
                     case "Steering Wheel":
-                        SoundSystem.Instance.PlaySound(new OXSound("Smeg", 0.2f).Pitch(0.5f).Clipping());
+                        SoundSystem.Instance.PlaySound(new OXSound("Smeg", dialog_lkoudness).Pitch(0.5f).Clipping());
                         break;
                     case "Gear Wheel":
-                        SoundSystem.Instance.PlaySound(new OXSound("Smeg", 0.2f).Pitch(0.42f).Clipping());
+                        SoundSystem.Instance.PlaySound(new OXSound("Smeg", dialog_lkoudness).Pitch(0.42f).Clipping());
                         break;
                     case "Rusty Wheel":
-                        SoundSystem.Instance.PlaySound(new OXSound("Smeg", 0.2f).Pitch(1f).Clipping());
+                        SoundSystem.Instance.PlaySound(new OXSound("Smeg", dialog_lkoudness).Pitch(1f).Clipping());
                         break;
                     case "Unknown":
-                        SoundSystem.Instance.PlaySound(new OXSound("Smeg", 0.2f).Pitch(0.25f).Clipping());
+                        SoundSystem.Instance.PlaySound(new OXSound("Smeg", dialog_lkoudness).Pitch(0.25f).Clipping());
                         break;
                     default:
-                        SoundSystem.Instance.PlaySound(new OXSound("Smeg", 0.2f).Pitch(0.75f).Clipping());
+                        SoundSystem.Instance.PlaySound(new OXSound("Smeg", dialog_lkoudness).Pitch(0.75f).Clipping());
                         break;
                 }
                 break;
