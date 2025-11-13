@@ -9,6 +9,8 @@ public class PlayerController : MonoBehaviour
     public float decay = 0.8f;
     private Vector3 move = new Vector3(0, 0, 0);
     public static PlayerController Instance;
+    public ParticleSystem bananerssmal;
+    public ParticleSystem bananers;
     private void Awake()
     {
         Instance = this;

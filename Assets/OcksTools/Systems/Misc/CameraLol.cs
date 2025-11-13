@@ -44,12 +44,12 @@ public class CameraLol : MonoBehaviour
             i--;
         }
     }
-
+    public Vector3 oldpos;
     private void LateUpdate()
     {
 
 
-        if (DisableCamera) return;
+        if (DisableCamera) goto end;
         /* some an example for what hurting a player could be like
         if (Input.GetKeyDown(KeyCode.N))
         {
@@ -102,6 +102,29 @@ public class CameraLol : MonoBehaviour
             ss.y += ff2;
         }
         transform.position = ss;
+
+
+    end:
+        var f = transform.position - oldpos;
+        if(PlayerController.Instance != null)
+        {
+            var b = new ParticleSystem.Particle[PlayerController.Instance.bananers.particleCount];
+            PlayerController.Instance.bananers.GetParticles(b);
+            for(int i = 0; i < b.Length; i++)
+            {
+                b[i].position += f/20;
+            }
+            PlayerController.Instance.bananers.SetParticles(b);
+
+            var b2 = new ParticleSystem.Particle[PlayerController.Instance.bananers.particleCount];
+            PlayerController.Instance.bananerssmal.GetParticles(b2);
+            for(int i = 0; i < b2.Length; i++)
+            {
+                b2[i].position += f/40;
+            }
+            PlayerController.Instance.bananerssmal.SetParticles(b2);
+        }
+        oldpos = transform.position;
     }
 
     public void Shake(float shake, float falloff, int dir1 = 0, int dir2 = 0)
