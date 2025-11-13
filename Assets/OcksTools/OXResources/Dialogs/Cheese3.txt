@@ -30,8 +30,9 @@
 </> Did you just say those parentheses out loud?
 </> 
 </> <Name=Cheese Wheel>
-</> It's just so fun, you know?
+</> Sleeping's just so fun, you know?
 </> 
+@<MonsterCheeseSleep>
 </> <Name=MC>
 </> I guess? And the bed?
 </> 
@@ -48,7 +49,7 @@
 </> That's really cool.
 </> 
 </> <Name=Cheese Wheel>
-</> Well, thank you, I guess this praise makes up for your not so kind awakening methods.
+</> Well, thank you, I guess this praise makes up for waking me up.
 </> 
 </> <Name=MC>
 </> Sorry about that, I was just really curious. I am still quite new, and still adjusting to life here.

@@ -17,6 +17,7 @@ public class CharacterInteractionNerd : MonoBehaviour
         yield return new WaitForFixedUpdate();
 
         GetComponent<SpriteRenderer>().sprite = to.CharacterLink.WheelImage;
-        ie.OnInteract.Append(() => DialogLol.Instance.StartDialog(to.CharacterLink.GetPreferredDialog()));
+        ie.OnInteract.Append("a", () =>to.CharacterLink.InteractLogic());
+        ie.OnInteract.Append("b", () => DialogLol.Instance.StartDialog(to.CharacterLink.GetPreferredDialog()));
     }
 }

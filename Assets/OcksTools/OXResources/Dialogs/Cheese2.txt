@@ -1,6 +1,6 @@
 -Test Dialog-
 </> <Name=Unknown>
-</> Mrrr... not now...
+</> Mrrr...
 </> 
 </> <Name=MC>
 </> Come on.

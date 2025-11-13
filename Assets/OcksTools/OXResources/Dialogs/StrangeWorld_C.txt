@@ -15,7 +15,7 @@
 </> You could say. I once counted how long it took them to leave the lab one time, I think I lost track after 69 hours?
 </>
 </> <Name=MC>
-</> Damn. Well, I guess that re-confirms where they'll be.
+</> Damn. Well, at least that re-confirms where they'll be.
 </> 
 </> <Name=Rusty Wheel>
 </> Yeah, I'd be shocked if they were anywhere else, frankly. Anyway, <Event=RustyExit>I'ma bounce. 

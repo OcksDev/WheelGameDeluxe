@@ -17,6 +17,10 @@ public class Character
     {
         Name = "Unknown";
     }
+    public virtual void InteractLogic()
+    {
+        //don't start dialog from here
+    }
     public virtual string GetPreferredDialog()
     {
         return "ERROR NO DIALOG FOR THIS CHARACTER";
@@ -127,6 +131,18 @@ public class CheeseWheel : Character
     {
         Name = "Cheese Wheel";
         WheelImage = Gamer.Instance.sprites[3];
+    }
+    public override void InteractLogic()
+    {
+        var g = Gamer.Instance;
+        if (g.HasEvented("TruckTalk"))
+        {
+            DialogLol.Instance.SetVariable("MonsterCheeseSleep", DialogLol.Instance.varname_to_file["MonsterCheeseSleep"].text);
+        }
+        else
+        {
+            DialogLol.Instance.SetVariable("MonsterCheeseSleep", DialogLol.Instance.varname_to_file["AltCheeseSleep"].text);
+        }
     }
     public override string GetPreferredDialog()
     {

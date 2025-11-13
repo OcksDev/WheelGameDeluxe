@@ -17,6 +17,7 @@ public class DialogLol : MonoBehaviour
     private DialogBoxL pp;
     public List<DialogHolder> DialogFiles = new List<DialogHolder>();
     public List<DialogHolder> ChooseFiles = new List<DialogHolder>();
+    public List<MultiRef<string, TextAsset>> VariablesFromFiles = new List<MultiRef<string, TextAsset>>();
     public bool dialogmode = false;
     public string filename = "";
     public int linenum = 0;
@@ -64,6 +65,7 @@ public class DialogLol : MonoBehaviour
     private string baldcharacters = " \n\t\r<>";
     private Dictionary<string, string> variables = new Dictionary<string, string>();
     private Dictionary<string, DialogSettings> name_to_setting = new Dictionary<string, DialogSettings>();
+    public Dictionary<string, TextAsset> varname_to_file = new Dictionary<string, TextAsset>();
 
     private static DialogLol instance;
 
@@ -112,7 +114,11 @@ public class DialogLol : MonoBehaviour
         SetVariable("AttributeInsideVar", "<Name=Bone Eater>");
         SetVariable("NestedAttribute", "<Animate=Text,Rainbow>");
         SetVariable("MassApplyVariable", "ApplyStyle");
-
+        foreach(var t in VariablesFromFiles)
+        {
+            SetVariable(t.a, t.b.text);
+            varname_to_file.Add(t.a, t.b);
+        }
         if (GetUseLFS())
         {
             FileSystem.Instance.CreateFolder($"{FileSystem.Instance.FileLocations["Lang"]}\\{FileSystem.GameVer}\\Dialog");
@@ -227,7 +233,9 @@ public class DialogLol : MonoBehaviour
                     {
                         e = e.Substring(e.Length - 1, 1);
                     }
-                    if (charl < fulltext.Length)
+                    var dd = fulltext.Substring(0, Mathf.Clamp(charl+1,0, fulltext.Length));
+                    if(dd.Length > 0) dd = dd.Substring(dd.Length - 1, 1);
+                    if (charl < fulltext.Length && dd != "." && dd != "!" && dd != "?" )
                     {
                         if (e == " " || e.Contains("\n"))
                         {

@@ -1,6 +1,6 @@
 -Test Dialog-
 </> <Name=MC>
-</> Hello there
+</> Hello there.
 </> 
 </> <Name=Unknown>
 </> Oh, your um, new, I suppose.

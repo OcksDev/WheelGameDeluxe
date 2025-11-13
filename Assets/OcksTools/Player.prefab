@@ -108,7 +108,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a5b3983c6649b34f8e29fcd0771279c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  move_speed: 1.3
+  move_speed: 1.8
   decay: 0.4
   bananerssmal: {fileID: 3046928955397405109}
   bananers: {fileID: 1840111182589551304}
@@ -125,7 +125,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDamping: 10
+  m_LinearDamping: 15
   m_AngularDamping: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 6200000, guid: 028b9ef71f8db08498a4855c59b4dcfd, type: 2}
