@@ -270,7 +270,7 @@ public class WagonWheel : Character
             {
                 if (g.HasEvented("WagonSpoken"))
                 {
-                    pp = "WagonStillSearching";
+                    pp = "";
                 }
             }
         }

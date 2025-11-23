@@ -15,7 +15,7 @@
 </> Oh cool, Monster Truck Wheel said you could give me the directions to the lab, where Pizza Wheel is.
 </> 
 </> <Name=Bearing Wheel>
-</> I-I can, if you go back the way you came, you can follow the corridor down, (extend)
+</> I-I can, if you go back the way you came, you can follow the corridor down a-and arrive at the lab.
 </> 
 </> <Name=MC>
 </> Back the way I came? But it's a straight path between here and the gym.
@@ -36,7 +36,7 @@
 </> You g-get used to it.
 </> 
 </> <Name=MC>
-</> So I've been told. See you around, I guess.
+</> So I've been told. See you around?
 </> 
 </> <Name=Bearing Wheel>
 </> ...

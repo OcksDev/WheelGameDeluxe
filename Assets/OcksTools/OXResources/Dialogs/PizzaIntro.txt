@@ -1,0 +1,85 @@
+-Test Dialog-
+</> <Name=MC>
+</> Hello there.
+</> 
+</> <Name=Unknown>
+</> Greetings.
+</> 
+</> <Name=MC>
+</> I assume you are Pizza Wheel?
+</> 
+</> <Name=Pizza Wheel>
+</> Indeed I am, but I don't believe we have met.
+</> 
+</> <Name=MC>
+</> We haven't, I'm Steering Wheel, I just arrived here.
+</> 
+</> <Name=Pizza Wheel>
+</> As expected, arrival devation remains within the hour. Another data point confirming that theory.
+</> 
+</> <Name=MC>
+</> What do you mean by that?
+</> 
+</> <Name=Pizza Wheel>
+</> After arriving and observing the arrival of a few wheels, I made the postulation that, here in Wheel Civilization, a new wheel would arrive once per week, and so far, it has been backed up by every recorded instance, deviating by no more than an hour.
+</> 
+</> <Name=MC>
+</> I see, although from what I can tell, there's something strange about my arrival.
+</> 
+</> <Name=Pizza Wheel>
+</> How so?
+</> 
+</> <Name=MC>
+</> Well, look at this.<Event=ShowPaper>
+</> 
+</> <Name=Pizza Wheel>
+</> Now this... this is interesting. Not an extra or a character, but something undefined? No information is listed, no data, and only 2 sentences...
+</> 
+</> <Name=MC>
+</> Do you have any idea about what it means?
+</> 
+</> <Name=Pizza Wheel>
+</> The setting is ambigious, possibly refering to the school as a whole, or possibly refering to some kind of "setting" of something. The second line is fairly clear in meaning, given previous formats, asserting that no more wheels will arrive. This must therefore conclude the arrival theory's data collection.
+</> 
+</> <Name=MC>
+</> I see.
+</> 
+</> <Name=Pizza Wheel>
+</> There is the possibility of tampering, although unlikely, as no sources of paper are known aside from arrivals. Does this paper lend credence to the higher power theory? Possibly, as no system of nature would break formula in such a degree, unless of course existing knowledge and related extrapolations were insufficient.
+</> 
+</> <Name=MC>
+</> Uhh...
+</> 
+</> <Name=Pizza Wheel>
+</> I could also be looking at this all wrong, and perhaps what reincarnates wheels and what creates the papers are two seperate forces, interlinked but not necessarily beholden to the other. This would slightly contradict the higher power theory, but is reasonably explainable. Note made, look into this possiblity.
+</> 
+</> <Name=Pizza Wheel>
+</> Additionally, assuming that the paper is authentic and unmodified, it would indicate some event occured to cause the end of the arrivals, or alternatively, a fixed amount were set to arrive from the beginning, and this is simply hitting the end of that counter. But why stagger the arrivals if that was the case? Why break from the pattern? Note made, look into what caused the final wheel to arrive.
+</> 
+</> <Name=MC>
+</> Hello?
+</> 
+</> <Name=Pizza Wheel>
+</> Oh, <Event=HidePaper>sorry, I got caught up in my head again, that often happens.
+</> 
+</> <Name=MC>
+</> Cool, well, I was hoping you could answer some questions of mine that I have about this place, as I think that would really help me out.
+</> 
+</> <Name=Pizza Wheel>
+</> I will answer to the best of my ability.
+</> 
+</> <Name=MC>
+</> So, what's up with the school we are trapped in? It seems to change as I move around, and it's very nonsensically layed out.
+</> 
+</> <Name=Pizza Wheel>
+</> To answer the first part, here in Wheel Civilization, depending on your location and where you have been, the school does seem to physically change, but only from your perspective. Not only do these changes apply per person, not globally, but they apply consistently, meaning the same movements result in the same changes. While they do seem illogical, they are repeatable, and from there, patterns emerge.
+</> 
+</> <Name=Pizza Wheel>
+</> Of the second part, the school isn't truly made like a school, more a facsimile of one. It has a lot of the rooms you might expect to find in a typical school building, but instead placed around almost haphazardly, without regard for practicality.
+</> 
+</> <Name=MC>
+</> Do you think the school was designed this way?
+</> 
+</> <Name=Pizza Wheel>
+</> Unknown. I have theorized that perhaps there is some kind of higher power that we are unable to observe which has organized everything we are expierencing, however, that leans closer to religion than science, and I can't back that up with evidence. 
+</> 

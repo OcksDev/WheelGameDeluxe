@@ -1,4 +1,4 @@
 -Test Dialog-
-</> <Name=MC>
-</> GO AWAY
+</> <Name=Wagon Wheel>
+</> Unused dialog lol
 </> <End>
